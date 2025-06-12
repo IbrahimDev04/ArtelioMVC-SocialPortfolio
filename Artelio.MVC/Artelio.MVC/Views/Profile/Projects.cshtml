@@ -1,0 +1,818 @@
+﻿@using System.Web
+@{
+    Layout = null;
+}
+
+@model PageProfileProjectDTO
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="~/assets/mainProfile/css/raw/styles.css">
+
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="~/assets/mainProfile/css/vendor/bootstrap.min.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="~/assets/mainProfile/css/styles.min.css">
+
+    <!-- simplebar styles -->
+    <link rel="stylesheet" href="~/assets/mainProfile/css/vendor/simplebar.css">
+    <!-- tiny-slider styles -->
+    <link rel="stylesheet" href="~/assets/mainProfile/css/vendor/tiny-slider.css">
+
+
+
+
+    <link rel="stylesheet" href="~/assets/main/css/plugins/bootstrap-grid.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="~/assets/main/css/plugins/fontawesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="~/assets/main/css/plugins/swiper.min.css">
+    <!-- okai css -->
+    <link rel="stylesheet" href="~/assets/main/css/style-stylish.css">
+    <!-- page title -->
+    <style>
+
+        .profile-header .profile-header-info .profile-header-social-links-wrap,
+        .profile-header .profile-header-info .user-stats,
+        .profile-header .profile-header-info .profile-header-info-actions {
+            position: static;
+        }
+
+        .profile-header .profile-header-info {
+            height: auto;
+            padding-bottom: 32px;
+        }
+
+            .profile-header .profile-header-info .profile-header-info-actions, .profile-header .profile-header-info .user-stats {
+                margin-top: 40px;
+            }
+
+            .profile-header .profile-header-info .profile-header-info-actions, .profile-header .profile-header-info .user-stats {
+                margin-top: 40px;
+            }
+
+        .content-grid {
+            max-width: 100%;
+            padding: 112px 112px 200px;
+            margin: 0 auto;
+        }
+
+        .header, .header .header-actions {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .big {
+            width: unset !important;
+            height: unset !important;
+            background-color: unset !important;
+        }
+
+    </style>
+
+    <!-- favicon -->
+    <link rel="icon" href="~/assets/mainProfile/img/favicon.ico">
+    <title>Vikinger | Profile</title>
+
+
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/assets/profile//css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="~/assets/profile//images/favicon.png" />
+
+
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+
+    <link rel="stylesheet" href="~/assets/main/css/plugins/fontawesome.min.css">
+
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- End layout styles -->
+</head>
+
+<body>
+
+
+
+    <nav class="navbar p-0 fixed-top d-flex flex-row" style="left:0;">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/assets/profile//images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown d-none d-lg-block">
+                    <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" asp-action="CreateProject" asp-controller="Profile">+ Create New Project</a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
+                        <h6 class="p-3 mb-0">Projects</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-file-outline text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject ellipsis mb-1">Software Development</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-web text-info"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject ellipsis mb-1">UI Development</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-layers text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject ellipsis mb-1">Software Testing</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <p class="p-3 mb-0 text-center">See all projects</p>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+                        <div class="navbar-profile">
+                            <img class="img-xs rounded-circle" src="~/@Model.GetUserInfoDTO.ImageUrl" alt="">
+                            <p class="mb-0 d-none d-sm-block navbar-profile-name">@Model.GetUserInfoDTO.FullName</p>
+                            <i class="fa-solid fa-caret-down" style="padding:3px;"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                        <h6 class="p-3 mb-0">Profile</h6>
+                        <div class="dropdown-divider"></div>
+                        <a asp-action="Index" asp-controller="profile" class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i style="color:green;" class="fa-solid fa-gear"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject mb-1">Settings</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a asp-action="LogOut" asp-controller="Account" class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i style="color: red;" class="fa-solid fa-right-from-bracket"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject mb-1">Log out</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- CHAT WIDGET -->
+    <aside id="chat-widget-message" class="chat-widget chat-widget-overlay hidden sidebar right">
+        <!-- CHAT WIDGET HEADER -->
+        <div class="chat-widget-header">
+            <!-- CHAT WIDGET CLOSE BUTTON -->
+            <div class="chat-widget-close-button">
+                <!-- CHAT WIDGET CLOSE BUTTON ICON -->
+                <svg class="chat-widget-close-button-icon icon-back-arrow">
+                    <use xlink:href="#svg-back-arrow"></use>
+                </svg>
+                <!-- CHAT WIDGET CLOSE BUTTON ICON -->
+            </div>
+            <!-- /CHAT WIDGET CLOSE BUTTON -->
+            <!-- USER STATUS -->
+            <div class="user-status">
+                <!-- USER STATUS AVATAR -->
+                <div class="user-status-avatar">
+                    <!-- USER AVATAR -->
+                    <div class="user-avatar small no-outline online">
+                        <!-- USER AVATAR CONTENT -->
+                        <div class="user-avatar-content">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-image-30-32" data-src="~/assets/mainProfile/img/avatar/03.jpg"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR CONTENT -->
+                        <!-- USER AVATAR PROGRESS -->
+                        <div class="user-avatar-progress">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-progress-40-44"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR PROGRESS -->
+                        <!-- USER AVATAR PROGRESS BORDER -->
+                        <div class="user-avatar-progress-border">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-border-40-44"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR PROGRESS BORDER -->
+                        <!-- USER AVATAR BADGE -->
+                        <div class="user-avatar-badge">
+                            <!-- USER AVATAR BADGE BORDER -->
+                            <div class="user-avatar-badge-border">
+                                <!-- HEXAGON -->
+                                <div class="hexagon-22-24"></div>
+                                <!-- /HEXAGON -->
+                            </div>
+                            <!-- /USER AVATAR BADGE BORDER -->
+                            <!-- USER AVATAR BADGE CONTENT -->
+                            <div class="user-avatar-badge-content">
+                                <!-- HEXAGON -->
+                                <div class="hexagon-dark-16-18"></div>
+                                <!-- /HEXAGON -->
+                            </div>
+                            <!-- /USER AVATAR BADGE CONTENT -->
+                            <!-- USER AVATAR BADGE TEXT -->
+                            <p class="user-avatar-badge-text">16</p>
+                            <!-- /USER AVATAR BADGE TEXT -->
+                        </div>
+                        <!-- /USER AVATAR BADGE -->
+                    </div>
+                    <!-- /USER AVATAR -->
+                </div>
+                <!-- /USER STATUS AVATAR -->
+                <!-- USER STATUS TITLE -->
+                <p class="user-status-title"><span class="bold">Nick Grissom</span></p>
+                <!-- /USER STATUS TITLE -->
+                <!-- USER STATUS TAG -->
+                <p class="user-status-tag online">Online</p>
+                <!-- /USER STATUS TAG -->
+            </div>
+            <!-- /USER STATUS -->
+        </div>
+        <!-- /CHAT WIDGET HEADER -->
+        <!-- CHAT WIDGET CONVERSATION -->
+        <div class="chat-widget-conversation" data-simplebar>
+            <!-- CHAT WIDGET SPEAKER -->
+            <div class="chat-widget-speaker left">
+                <!-- CHAT WIDGET SPEAKER AVATAR -->
+                <div class="chat-widget-speaker-avatar">
+                    <!-- USER AVATAR -->
+                    <div class="user-avatar tiny no-border">
+                        <!-- USER AVATAR CONTENT -->
+                        <div class="user-avatar-content">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-image-24-26" data-src="~/assets/mainProfile/img/avatar/03.jpg"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR CONTENT -->
+                    </div>
+                    <!-- /USER AVATAR -->
+                </div>
+                <!-- /CHAT WIDGET SPEAKER AVATAR -->
+                <!-- CHAT WIDGET SPEAKER MESSAGE -->
+                <p class="chat-widget-speaker-message">Hi Marina! It's been a long time!</p>
+                <!-- /CHAT WIDGET SPEAKER MESSAGE -->
+                <!-- CHAT WIDGET SPEAKER TIMESTAMP -->
+                <p class="chat-widget-speaker-timestamp">Yesterday at 8:36PM</p>
+                <!-- /CHAT WIDGET SPEAKER TIMESTAMP -->
+            </div>
+            <!-- /CHAT WIDGET SPEAKER -->
+            <!-- CHAT WIDGET SPEAKER -->
+            <div class="chat-widget-speaker right">
+                <!-- CHAT WIDGET SPEAKER MESSAGE -->
+                <p class="chat-widget-speaker-message">Hey Nick!</p>
+                <!-- /CHAT WIDGET SPEAKER MESSAGE -->
+                <!-- CHAT WIDGET SPEAKER MESSAGE -->
+                <p class="chat-widget-speaker-message">You're right, it's been a really long time! I think the last time we saw was at Neko's party</p>
+                <!-- /CHAT WIDGET SPEAKER MESSAGE -->
+                <!-- CHAT WIDGET SPEAKER TIMESTAMP -->
+                <p class="chat-widget-speaker-timestamp">10:05AM</p>
+                <!-- /CHAT WIDGET SPEAKER TIMESTAMP -->
+            </div>
+            <!-- /CHAT WIDGET SPEAKER -->
+            <!-- CHAT WIDGET SPEAKER -->
+            <div class="chat-widget-speaker left">
+                <!-- CHAT WIDGET SPEAKER AVATAR -->
+                <div class="chat-widget-speaker-avatar">
+                    <!-- USER AVATAR -->
+                    <div class="user-avatar tiny no-border">
+                        <!-- USER AVATAR CONTENT -->
+                        <div class="user-avatar-content">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-image-24-26" data-src="~/assets/mainProfile/img/avatar/03.jpg"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR CONTENT -->
+                    </div>
+                    <!-- /USER AVATAR -->
+                </div>
+                <!-- /CHAT WIDGET SPEAKER AVATAR -->
+                <!-- CHAT WIDGET SPEAKER MESSAGE -->
+                <p class="chat-widget-speaker-message">Yeah! I remember now! The stream launch party</p>
+                <!-- /CHAT WIDGET SPEAKER MESSAGE -->
+                <!-- CHAT WIDGET SPEAKER MESSAGE -->
+                <p class="chat-widget-speaker-message">That reminds me that I wanted to ask you something</p>
+                <!-- /CHAT WIDGET SPEAKER MESSAGE -->
+                <!-- CHAT WIDGET SPEAKER MESSAGE -->
+                <p class="chat-widget-speaker-message">Can you stream the new game?</p>
+                <!-- /CHAT WIDGET SPEAKER MESSAGE -->
+            </div>
+            <!-- /CHAT WIDGET SPEAKER -->
+        </div>
+        <!-- /CHAT WIDGET CONVERSATION -->
+        <!-- CHAT WIDGET FORM -->
+        <form class="chat-widget-form">
+            <!-- INTERACTIVE INPUT -->
+            <div class="interactive-input small">
+                <input type="text" id="chat-widget-message-text" name="chat_widget_message_text" placeholder="Write a message...">
+                <!-- INTERACTIVE INPUT ICON WRAP -->
+                <div class="interactive-input-icon-wrap">
+                    <!-- INTERACTIVE INPUT ICON -->
+                    <svg class="interactive-input-icon icon-send-message">
+                        <use xlink:href="#svg-send-message"></use>
+                    </svg>
+                    <!-- /INTERACTIVE INPUT ICON -->
+                </div>
+                <!-- /INTERACTIVE INPUT ICON WRAP -->
+                <!-- INTERACTIVE INPUT ACTION -->
+                <div class="interactive-input-action">
+                    <!-- INTERACTIVE INPUT ACTION ICON -->
+                    <svg class="interactive-input-action-icon icon-cross-thin">
+                        <use xlink:href="#svg-cross-thin"></use>
+                    </svg>
+                    <!-- /INTERACTIVE INPUT ACTION ICON -->
+                </div>
+                <!-- /INTERACTIVE INPUT ACTION -->
+            </div>
+            <!-- /INTERACTIVE INPUT -->
+        </form>
+        <!-- /CHAT WIDGET FORM -->
+    </aside>
+    <!-- /CHAT WIDGET -->
+    <!-- FLOATY BAR -->
+    <aside class="floaty-bar">
+        <!-- BAR ACTIONS -->
+        <div class="bar-actions">
+            <!-- PROGRESS STAT -->
+            <div class="progress-stat">
+                <!-- BAR PROGRESS WRAP -->
+                <div class="bar-progress-wrap">
+                    <!-- BAR PROGRESS INFO -->
+                    <p class="bar-progress-info">Next: <span class="bar-progress-text"></span></p>
+                    <!-- /BAR PROGRESS INFO -->
+                </div>
+                <!-- /BAR PROGRESS WRAP -->
+                <!-- PROGRESS STAT BAR -->
+                <div id="logged-user-level-cp" class="progress-stat-bar"></div>
+                <!-- /PROGRESS STAT BAR -->
+            </div>
+            <!-- /PROGRESS STAT -->
+        </div>
+        <!-- /BAR ACTIONS -->
+        <!-- BAR ACTIONS -->
+        <div class="bar-actions">
+            <!-- ACTION LIST -->
+            <div class="action-list dark">
+                <!-- ACTION LIST ITEM -->
+                <a class="action-list-item" href="~/assets/mainProfile/marketplace-cart.html">
+                    <!-- ACTION LIST ITEM ICON -->
+                    <svg class="action-list-item-icon icon-shopping-bag">
+                        <use xlink:href="#svg-shopping-bag"></use>
+                    </svg>
+                    <!-- /ACTION LIST ITEM ICON -->
+                </a>
+                <!-- /ACTION LIST ITEM -->
+                <!-- ACTION LIST ITEM -->
+                <a class="action-list-item" href="~/assets/mainProfile/hub-profile-requests.html">
+                    <!-- ACTION LIST ITEM ICON -->
+                    <svg class="action-list-item-icon icon-friend">
+                        <use xlink:href="#svg-friend"></use>
+                    </svg>
+                    <!-- /ACTION LIST ITEM ICON -->
+                </a>
+                <!-- /ACTION LIST ITEM -->
+                <!-- ACTION LIST ITEM -->
+                <a class="action-list-item" href="~/assets/mainProfile/hub-profile-messages.html">
+                    <!-- ACTION LIST ITEM ICON -->
+                    <svg class="action-list-item-icon icon-messages">
+                        <use xlink:href="#svg-messages"></use>
+                    </svg>
+                    <!-- /ACTION LIST ITEM ICON -->
+                </a>
+                <!-- /ACTION LIST ITEM -->
+                <!-- ACTION LIST ITEM -->
+                <a class="action-list-item unread" href="~/assets/mainProfile/hub-profile-notifications.html">
+                    <!-- ACTION LIST ITEM ICON -->
+                    <svg class="action-list-item-icon icon-notification">
+                        <use xlink:href="#svg-notification"></use>
+                    </svg>
+                    <!-- /ACTION LIST ITEM ICON -->
+                </a>
+                <!-- /ACTION LIST ITEM -->
+            </div>
+            <!-- /ACTION LIST -->
+            <!-- ACTION ITEM WRAP -->
+            <a class="action-item-wrap" href="~/assets/mainProfile/hub-profile-info.html">
+                <!-- ACTION ITEM -->
+                <div class="action-item dark">
+                    <!-- ACTION ITEM ICON -->
+                    <svg class="action-item-icon icon-settings">
+                        <use xlink:href="#svg-settings"></use>
+                    </svg>
+                    <!-- /ACTION ITEM ICON -->
+                </div>
+                <!-- /ACTION ITEM -->
+            </a>
+            <!-- /ACTION ITEM WRAP -->
+        </div>
+        <!-- /BAR ACTIONS -->
+    </aside>
+    <!-- /FLOATY BAR -->
+    <!-- CONTENT GRID -->
+    <div class="content-grid" style="padding-left: 10px; padding-right:10px; padding-top: 100px">
+        <!-- PROFILE HEADER -->
+        <div class="profile-header">
+            <!-- PROFILE HEADER COVER -->
+            <figure class="profile-header-cover liquid">
+                <img src="~/assets//imgs/Banner/@Model.GetUserProfileDTO.BannerUrl">
+            </figure>
+            <!-- /PROFILE HEADER COVER -->
+            <!-- PROFILE HEADER INFO -->
+            <div class="profile-header-info">
+                <!-- USER SHORT DESCRIPTION -->
+                <div class="user-short-description big">
+                    <!-- USER SHORT DESCRIPTION AVATAR -->
+                    <a class="user-short-description-avatar user-avatar big" href="~/assets/mainProfile/profile-timeline.html" style="width:0; height:0;">
+                        <!-- USER AVATAR BORDER -->
+                        <div class="user-avatar-border">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-148-164"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BORDER -->
+                        <!-- USER AVATAR CONTENT -->
+                        <div class="user-avatar-content">
+                            <!-- HEXAGON -->
+
+                            <style>
+                                .hexagon {
+                                    width: 100px;
+                                    height: 100px;
+                                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 1% 75%, 1% 25%);
+                                    overflow: hidden;
+                                    margin-top: 5px;
+                                }
+
+                                    .hexagon img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border-radius: 15px;
+                                    }
+                            </style>
+
+                            <div class="hexagon">
+                                <img src="~/@Model.GetUserProfileDTO.ImageUrl" alt="Alternate Text" />
+                            </div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR CONTENT -->
+                        <!-- USER AVATAR PROGRESS -->
+                        <div class="user-avatar-progress">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-progress-124-136"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR PROGRESS -->
+                        <!-- USER AVATAR PROGRESS BORDER -->
+                        <div class="user-avatar-progress-border">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-border-124-136"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR PROGRESS BORDER -->
+
+                    </a>
+                    <!-- /USER SHORT DESCRIPTION AVATAR -->
+                    <!-- USER SHORT DESCRIPTION AVATAR -->
+                    <a class="user-short-description-avatar user-short-description-avatar-mobile user-avatar medium" href="~/assets/mainProfile/profile-timeline.html">
+                        <!-- USER AVATAR BORDER -->
+                        <div class="user-avatar-border">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-120-132"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BORDER -->
+                        <!-- USER AVATAR CONTENT -->
+                        <div class="user-avatar-content">
+
+                            <!-- HEXAGON -->
+
+                            <style>
+                                .hexagona {
+                                    width: 80px;
+                                    height: 80px;
+                                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 1% 75%, 1% 25%);
+                                    overflow: hidden;
+                                    margin-top: 5px;
+                                }
+
+                                    .hexagona img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border-radius: 15px;
+                                    }
+                            </style>
+
+                            <div class="hexagona">
+                                <img src="~/@Model.GetUserProfileDTO.ImageUrl" alt="Alternate Text" />
+                            </div>
+                        </div>
+                        <!-- /USER AVATAR CONTENT -->
+                        <!-- USER AVATAR PROGRESS -->
+                        <div class="user-avatar-progress">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-progress-100-110"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR PROGRESS -->
+                        <!-- USER AVATAR PROGRESS BORDER -->
+                        <div class="user-avatar-progress-border">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-border-100-110"></div>
+                            <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR PROGRESS BORDER -->
+                        <!-- USER AVATAR BADGE -->
+                        <div class="user-avatar-badge">
+                            <!-- USER AVATAR BADGE BORDER -->
+                            <div class="user-avatar-badge-border">
+                                <!-- HEXAGON -->
+                                <div class="hexagon-32-36"></div>
+                                <!-- /HEXAGON -->
+                            </div>
+                            <!-- /USER AVATAR BADGE BORDER -->
+                            <!-- USER AVATAR BADGE CONTENT -->
+                            <div class="user-avatar-badge-content">
+                                <!-- HEXAGON -->
+                                <div class="hexagon-dark-26-28"></div>
+                                <!-- /HEXAGON -->
+                            </div>
+                            <!-- /USER AVATAR BADGE CONTENT -->
+                            <!-- USER AVATAR BADGE TEXT -->
+                            <p class="user-avatar-badge-text">24</p>
+                            <!-- /USER AVATAR BADGE TEXT -->
+                        </div>
+                        <!-- /USER AVATAR BADGE -->
+                    </a>
+                    <!-- /USER SHORT DESCRIPTION AVATAR -->
+                    <!-- USER SHORT DESCRIPTION TITLE -->
+                    <p class="user-short-description-title"><a">@Model.GetUserProfileDTO.FullName</a></p>
+                    <!-- /USER SHORT DESCRIPTION TITLE -->
+                    <!-- USER SHORT DESCRIPTION TEXT -->
+                    <p class="user-short-description-text"><a>@Model.GetUserProfileDTO.Username</a></p>
+                    <!-- /USER SHORT DESCRIPTION TEXT -->
+                </div>
+                <!-- /USER SHORT DESCRIPTION -->
+                <!-- USER STATS -->
+                <div class="user-stats">
+                    <!-- USER STAT -->
+                    <div class="user-stat big">
+                        <!-- USER STAT TITLE -->
+                        <p class="user-stat-title">@Model.GetPostCount</p>
+                        <!-- /USER STAT TITLE -->
+                        <!-- USER STAT TEXT -->
+                        <p class="user-stat-text">Project</p>
+                        <!-- /USER STAT TEXT -->
+                    </div>
+                    <!-- /USER STAT -->
+                    <!-- USER STAT -->
+                    <div class="user-stat big">
+                        <!-- USER STAT TITLE -->
+                        <p class="user-stat-title">82</p>
+                        <!-- /USER STAT TITLE -->
+                        <!-- USER STAT TEXT -->
+                        <p class="user-stat-text">friends</p>
+                        <!-- /USER STAT TEXT -->
+                    </div>
+                    <!-- /USER STAT -->
+                    <!-- USER STAT -->
+                    <div class="user-stat big">
+                        <!-- USER STAT TITLE -->
+                        <p class="user-stat-title">@Model.GetAllViewer</p>
+                        <!-- /USER STAT TITLE -->
+                        <!-- USER STAT TEXT -->
+                        <p class="user-stat-text">Viewer</p>
+                        <!-- /USER STAT TEXT -->
+                    </div>
+                    <!-- /USER STAT -->
+
+                </div>
+                <!-- /USER STATS -->
+                @if (Model.GetUserInfoDTO.Id != Model.GetUserProfileDTO.Id)
+                {
+                    <div class="profile-header-info-actions">
+                        <p class="profile-header-info-action button secondary"><span class="hide-text-mobile">Add</span> Friend +</p>
+                        <p class="profile-header-info-action button primary"><span class="hide-text-mobile">Send</span> Message</p>
+                    </div>
+                }
+
+            </div>
+            <!-- /PROFILE HEADER INFO -->
+        </div>
+        <!-- /PROFILE HEADER -->
+        <nav class="section-navigation">
+
+            <div id="section-navigation-slider" class="section-menu">
+                "
+
+                <a class="section-menu-item" asp-action="Profile" asp-controller="Profile" asp-route-userId="@Model.GetUserProfileDTO.Id">
+                    <svg class="section-menu-item-icon icon-profile">
+                        <use xlink:href="#svg-profile"></use>
+                    </svg>
+                    <p class="section-menu-item-text">About</p>
+                </a>
+                <a class="section-menu-item active" asp-action="Projects" asp-controller="Profile" asp-route-userId="@Model.GetUserProfileDTO.Id">
+
+                    <svg class="section-menu-item-icon icon-videos">
+                        <use xlink:href="#svg-videos"></use>
+                    </svg>
+                    <p class="section-menu-item-text">Projects</p>
+                </a>
+                <a class="section-menu-item" href="~/assets/mainProfile/profile-groups.html">
+                    <svg class="section-menu-item-icon icon-group">
+                        <use xlink:href="#svg-group"></use>
+                    </svg>
+                    <p class="section-menu-item-text">Groups</p>
+                </a>
+                <a class="section-menu-item" href="~/assets/mainProfile/profile-photos.html">
+                    <svg class="section-menu-item-icon icon-photos">
+                        <use xlink:href="#svg-photos"></use>
+                    </svg>
+                    <p class="section-menu-item-text">Photos</p>
+                </a>
+                <a class="section-menu-item" href="~/assets/mainProfile/profile-videos.html">
+                    <svg class="section-menu-item-icon icon-friend">
+                        <use xlink:href="#svg-friend"></use>
+                    </svg>
+                    <p class="section-menu-item-text">Friends</p>
+                </a>
+
+            </div>
+
+            <!-- SLIDER CONTROLS -->
+            <div id="section-navigation-slider-controls" class="slider-controls">
+                <!-- SLIDER CONTROL -->
+                <div class="slider-control left">
+                    <!-- SLIDER CONTROL ICON -->
+                    <svg class="slider-control-icon icon-small-arrow">
+                        <use xlink:href="#svg-small-arrow"></use>
+                    </svg>
+                    <!-- /SLIDER CONTROL ICON -->
+                </div>
+                <!-- /SLIDER CONTROL -->
+                <!-- SLIDER CONTROL -->
+                <div class="slider-control right">
+                    <!-- SLIDER CONTROL ICON -->
+                    <svg class="slider-control-icon icon-small-arrow">
+                        <use xlink:href="#svg-small-arrow"></use>
+                    </svg>
+                    <!-- /SLIDER CONTROL ICON -->
+                </div>
+                <!-- /SLIDER CONTROL -->
+            </div>
+            <!-- /SLIDER CONTROLS -->
+        </nav>
+        <!-- GRID -->
+        <div class="">
+            <div class="">
+
+                        @foreach (var item in Model.projectsDTOs)
+                        {
+                            <div style="background-color: rgba(128,128,128,0.6); border-radius:20px; padding-top:10px; padding-bottom:10px;padding: 10px; margin: 40px;">
+                        <a style="text-decoration: none; font-weight: 900;" asp-action="Profile" asp-controller="Profile" asp-route-userId="@item.UserId">
+                            <div style="display: flex; margin-bottom:10px;">
+                                <img class="img-xs rounded-circle" src="~/@item.UserImageUrl" alt="">
+                                <p style="padding-top: 10px; padding-left: 10px;" class="mb-0 d-none d-sm-block navbar-profile-name">@item.UserName</p>
+                            </div>
+                        </a>
+                        <a asp-action="Detail" asp-controller="Home" asp-route-project="@item.Id">
+                                                        <!-- PHOTO PREVIEW -->
+                            <div class="photo-preview popup-picture-trigger" style="height: 600px; width: 100%;">
+
+                                <!-- PHOTO PREVIEW IMAGE -->
+                                <figure class="photo-preview-image liquid" style="background: url(&quot;~/assets/imgs/Project/@item.ImageUrl&quot;) center center / cover no-repeat;">
+                                    <img src="~/assets/imgs/Project/@item.ImageUrl" alt="photo-preview-04" style="display: none;">
+                                </figure>
+                                <!-- /PHOTO PREVIEW IMAGE -->
+                                <!-- PHOTO PREVIEW INFO -->
+                                <div class="photo-preview-info">
+                                    <!-- REACTION COUNT LIST -->
+                                    <div class="reaction-count-list landscape">
+                                        <!-- REACTION COUNT -->
+                                        <div class="reaction-count negative">
+                                            <!-- REACTION COUNT ICON -->
+                                            <i class="fa-regular fa-eye" style="color:forestgreen; font-size:20px;"></i>
+                                            <!-- /REACTION COUNT ICON -->
+                                            <!-- REACTION COUNT TEXT -->
+                                            <p class="reaction-count-text" style="font-size:20px;">@item.ViewerCount</p>
+                                            <!-- /REACTION COUNT TEXT -->
+                                        </div>
+                                        <!-- /REACTION COUNT -->
+                                    </div>
+                                    <!-- /REACTION COUNT LIST -->
+                                </div>
+                                <!-- /PHOTO PREVIEW INFO -->
+                            </div>
+                            <!-- /PHOTO PREVIEW -->
+                        </a>
+
+                        </div>
+
+                   
+                        }
+
+
+            </div>
+        </div>
+        <!-- /GRID -->
+    </div>
+    <!-- /CONTENT GRID -->
+    <!-- POPUP VIDEO -->
+    <div class="popup-video">
+        <!-- POPUP CLOSE BUTTON -->
+        <div class="popup-close-button popup-video-trigger">
+            <!-- POPUP CLOSE BUTTON ICON -->
+            <svg class="popup-close-button-icon icon-cross">
+                <use xlink:href="#svg-cross"></use>
+            </svg>
+            <!-- /POPUP CLOSE BUTTON ICON -->
+        </div>
+        <!-- /POPUP CLOSE BUTTON -->
+        <!-- IFRAME WRAP -->
+        <div class="iframe-wrap">
+            <iframe src="~/assets/mainProfile/https://www.youtube.com/embed/6ErE27RNLDQ?start=200" allowfullscreen></iframe>
+        </div>
+        <!-- /IFRAME WRAP -->
+    </div>
+    <!-- /POPUP VIDEO -->
+    <!-- app -->
+    <script src="~/assets/mainProfile/js/utils/app.js"></script>
+    <!-- page loader -->
+    <script src="~/assets/mainProfile/js/utils/page-loader.js"></script>
+    <!-- simplebar -->
+    <script src="~/assets/mainProfile/js/vendor/simplebar.min.js"></script>
+    <!-- liquidify -->
+    <script src="~/assets/mainProfile/js/utils/liquidify.js"></script>
+    <!-- XM_Plugins -->
+    <script src="~/assets/mainProfile/js/vendor/xm_plugins.min.js"></script>
+    <!-- tiny-slider -->
+    <script src="~/assets/mainProfile/js/vendor/tiny-slider.min.js"></script>
+    <!-- global.hexagons -->
+    <script src="~/assets/mainProfile/js/global/global.hexagons.js"></script>
+    <!-- global.tooltips -->
+    <script src="~/assets/mainProfile/js/global/global.tooltips.js"></script>
+    <!-- global.popups -->
+    <!-- header -->
+    <script src="~/assets/mainProfile/js/header/header.js"></script>
+    <!-- sidebar -->
+    <script src="~/assets/mainProfile/js/sidebar/sidebar.js"></script>
+    <!-- content -->
+    <script src="~/assets/mainProfile/js/content/content.js"></script>
+    <!-- form.utils -->
+    <script src="~/assets/mainProfile/js/form/form.utils.js"></script>
+    <!-- twitter widget -->
+    <script src="~/assets/mainProfile/js/widget/twitter.js"></script>
+    <!-- SVG icons -->
+    <script src="~/assets/mainProfile/js/utils/svg-loader.js"></script>
+
+
+
+
+
+
+
+    <script src="~/assets/profile//vendors/js/vendor.bundle.base.js"></script>
+
+</body>
+</html>

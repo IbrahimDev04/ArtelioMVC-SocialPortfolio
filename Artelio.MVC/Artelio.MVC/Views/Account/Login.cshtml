@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+@model LoginDTO
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artelio</title>
+    <link rel="stylesheet" href="~/assets/auth/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post">
+            <h2>Login</h2>
+            <div class="input-field">
+                <input asp-for="@Model.UserNameOrEmail" required>
+                <label asp-for="@Model.UserNameOrEmail">Username or Email</label>
+                <span asp-validation-for="@Model.UserNameOrEmail" style="color: red; text-align: start;"></span>
+
+            </div>
+            <div class="input-field">
+                <input asp-for="@Model.Password" required>
+                <label asp-for="@Model.Password"></label>
+                <span asp-validation-for="@Model.Password" style="color: red; text-align: start;"></span>
+
+            </div>
+            <div class="forget">
+                <label asp-for="@Model.RememberMe" for="remember">
+                    <input asp-for="@Model.RememberMe" id="remember">
+                    <p>Remember me</p>
+                </label>
+                <a asp-controller="Account" asp-action="FogotPassword">Forgot password?</a>
+            </div>
+            <button type="submit">Log In</button>
+            <div asp-validation-summary="ModelOnly" style="color: red; text-align: start;"></div>
+        </form>
+        <div class="register">
+            <p>Don't have an account? <a asp-controller="Account" asp-action="Register">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>

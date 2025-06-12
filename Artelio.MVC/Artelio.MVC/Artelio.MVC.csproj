@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\main\css\.DS_Store" />
+    <None Include="wwwroot\assets\main\css\plugins\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\blog\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\brands\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\demo\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-1\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-1\iconbox\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-2\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-3\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-3\scene-1\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-3\scene-2\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-4\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-5\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\home-6\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\pages\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\reviews\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\shapes\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\team\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\10\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\11\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\12\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\1\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\2\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\3\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\4\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\5\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\6\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\7\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\8\.DS_Store" />
+    <None Include="wwwroot\assets\main\img\works\9\.DS_Store" />
+    <None Include="wwwroot\assets\main\js\.DS_Store" />
+    <None Include="wwwroot\assets\main\js\plugins\.DS_Store" />
+    <None Include="wwwroot\assets\main\scss\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\imgs\Award\" />
+    <Folder Include="wwwroot\assets\imgs\Project\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+@model RegisterDTO
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artelio</title>
+    <link rel="stylesheet" href="~/assets/auth/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post">
+            <h2>Register</h2>
+            <div style="display:flex; justify-content:space-between;"> 
+                <div class="input-field" style="margin-right:5%;" >
+                    <input asp-for="@Model.Name" required>
+                    <label asp-for="@Model.Name"></label>
+                </div>
+                <span asp-validation-for="@Model.Name" style="color: red; text-align: start;"></span>
+                <div class="input-field" style="margin-left:5%;">
+                    <input asp-for="@Model.Surname" required>
+                    <label asp-for="@Model.Surname"></label>
+                </div>
+                <span asp-validation-for="@Model.Surname" style="color: red; text-align: start;"></span>
+            </div>
+            <div class="input-field">
+                <input asp-for="@Model.Username" required>
+                <label asp-for="@Model.Username"></label>
+            </div>
+            <span asp-validation-for="@Model.Username" style="color: red; text-align: start;"></span>
+            <div class="input-field">
+                <input asp-for="@Model.Email" required>
+                <label asp-for="@Model.Email"></label>
+            </div>
+            <span asp-validation-for="@Model.Email" style="color: red; text-align: start;"></span>
+            <div class="input-field">
+                <input asp-for="@Model.Password" required>
+                <label asp-for="@Model.Password"></label>
+            </div>
+            <span asp-validation-for="@Model.Password" style="color: red; text-align: start;"></span>
+            <div class="input-field">
+                <input asp-for="@Model.RepeatPassword" required>
+                <label asp-for="@Model.RepeatPassword"></label>
+            </div>
+            <span asp-validation-for="@Model.RepeatPassword" style="color: red; text-align: start;"></span>
+            <button type="submit">Register</button>
+
+            <div asp-validation-summary="ModelOnly" style="color: red; text-align: start;"></div>
+
+        </form>
+        <div class="register">
+            <p>Do you have an account? <a asp-controller="Account" asp-action="Login">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

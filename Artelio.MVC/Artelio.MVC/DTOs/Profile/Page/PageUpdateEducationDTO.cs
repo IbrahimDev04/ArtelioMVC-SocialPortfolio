@@ -1,0 +1,10 @@
+﻿using Artelio.MVC.DTOs.Auth;
+
+namespace Artelio.MVC.DTOs.Profile.Page
+{
+    public class PageUpdateEducationDTO
+    {
+        public UpdateUserEducationDTO? UpdateUserEducationDTO { get; set; }
+        public GetUserInfoDTO? GetUserInfoDTO { get; set; }
+    }
+}
