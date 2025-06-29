@@ -147,3 +147,7 @@ C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\bin\Debug\net8.0\FluentVa
 C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\obj\Debug\net8.0\Artelio.MVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\ibrah\Desktop\Artelio\Artelio.MVC\Artelio.MVC\obj\Debug\net8.0\Artelio.MVC.sourcelink.json

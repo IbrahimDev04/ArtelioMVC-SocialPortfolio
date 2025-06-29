@@ -67,7 +67,7 @@ namespace Artelio.MVC.Services.Implements
             {
                 Id = userId,
                 FullName = user.Name + " " + user.Surname,
-                UserName = "@" + user.Name.ToLower() + user.Surname.ToLower(),
+                UserName = "@" + user.UserName,
                 ImageUrl = user.ImageUrl
             };
 

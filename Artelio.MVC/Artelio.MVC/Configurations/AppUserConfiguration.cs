@@ -83,6 +83,16 @@ namespace Artelio.MVC.Configurations
                 .WithOne(f => f.User)
                 .HasForeignKey(f => f.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasMany(u => u.from)
+                .WithOne(f => f.From)
+                .HasForeignKey(f => f.FromId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasMany(u => u.to)
+                .WithOne(f => f.To)
+                .HasForeignKey(f => f.ToId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

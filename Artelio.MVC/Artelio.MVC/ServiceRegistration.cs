@@ -2,10 +2,12 @@
 using Artelio.MVC.Contexts;
 using Artelio.MVC.Entities;
 using Artelio.MVC.Exceptions.Common;
+using Artelio.MVC.HubService;
 using Artelio.MVC.Services.Implements;
 using Artelio.MVC.Services.Interfaces;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SignalR;
 
 namespace Artelio.MVC
 {
@@ -19,6 +21,8 @@ namespace Artelio.MVC
             services.AddScoped<IProfileService, ProfileService>();
             services.AddScoped<IFriendService, FriendService>();
             services.AddScoped<INotificationService, NotificationService>();
+            services.AddScoped<IMessageService, MessageService>();
+            services.AddSingleton<IUserIdProvider, CustomUserIdProvider>();
 
 
 
@@ -44,6 +48,19 @@ namespace Artelio.MVC
             services.AddSqlServer<ArtelioContext>(connStr);
             return services;
         }
+
+
+        public static IServiceCollection AddCorsService(this IServiceCollection services)
+        {
+            services.AddCors(opt => opt.AddDefaultPolicy(policy => policy
+                .AllowCredentials()
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .SetIsOriginAllowed(x => true)));
+
+            return services;
+        }
+
 
 
     }

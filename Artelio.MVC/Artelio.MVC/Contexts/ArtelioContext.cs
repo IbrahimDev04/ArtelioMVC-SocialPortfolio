@@ -7,6 +7,7 @@ namespace Artelio.MVC.Contexts
 {
     public class ArtelioContext : IdentityDbContext<AppUser>
     {
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Award> Awards { get; set; }
         public DbSet<Education> Educations { get; set; }
         public DbSet<Follow> Follows { get; set; }
@@ -23,6 +24,7 @@ namespace Artelio.MVC.Contexts
         public DbSet<ProjectImages> ProjectImages { get; set; }
         public DbSet<ViewerProject> viewerProjects   { get; set; }
         public DbSet<Notification> notifications { get; set; }
+        public DbSet<Message> messages { get; set; }
 
 
 

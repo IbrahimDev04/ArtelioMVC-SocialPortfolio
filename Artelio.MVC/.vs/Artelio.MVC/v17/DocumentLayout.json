@@ -3,64 +3,352 @@
   "WorkspaceRootPath": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\implements\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\implements\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\work.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\work.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\notification\\getusernotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\notification\\getusernotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\viewerproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\viewerproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\implements\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\implements\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\socialmedialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\socialmedialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\language.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\language.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\notification\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\notification\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\workexperience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\workexperience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\award.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\award.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\projects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\projects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\award.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\award.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\createaward.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\createaward.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\createeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\createeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\createexperience.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\createexperience.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\createlanguage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\createlanguage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\createproject.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\createproject.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\createskills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\createskills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\education.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\education.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\language.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\language.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\socialmedia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\socialmedia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\updateaward.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\updateaward.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\updateeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\updateeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\updateexperience.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\updateexperience.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\profile\\workexperience.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\profile\\workexperience.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\home\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\home\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\implements\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\implements\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\implements\\profilesettingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\implements\\profilesettingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\contexts\\arteliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\contexts\\arteliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\configurations\\educationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\configurations\\educationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\enums\\countryenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\enums\\countryenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\notification\\page\\pagenotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\notification\\page\\pagenotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\messengercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\messengercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\messenger\\page\\pagegetmessengerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\messenger\\page\\pagegetmessengerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\messenger\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\messenger\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\notification\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\notification\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\implements\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\implements\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\notification\\getusernotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\notification\\getusernotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagebasicinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagebasicinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagehomedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagehomedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagesocialmediainfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagesocialmediainfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagegeteducationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagegeteducationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagecreateeducationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagecreateeducationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pageupdateeducationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pageupdateeducationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagegetworkexperiencedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagegetworkexperiencedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagecreateexperiencedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagecreateexperiencedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pageupdateexperiencedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pageupdateexperiencedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagegetawarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagegetawarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagecreateawarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagecreateawarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pageupdateawarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pageupdateawarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagegetlanguagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagegetlanguagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagecreatelanguagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagecreatelanguagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagegetabilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagegetabilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagecreateabilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagecreateabilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pagecreateprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pagecreateprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pageprofileprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pageprofileprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\profile\\page\\pageprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\profile\\page\\pageprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\interfaces\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\interfaces\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\messenger\\createmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\messenger\\createmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\messenger\\getmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\messenger\\getmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\hubservice\\customuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\hubservice\\customuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\implements\\friendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\implements\\friendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\views\\error\\errorpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\views\\error\\errorpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\dtos\\friend\\getuserfriendsformessengerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\dtos\\friend\\getuserfriendsformessengerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\configurations\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\configurations\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\interfaces\\ifriendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\interfaces\\ifriendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\services\\interfaces\\iprofilesettingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\services\\interfaces\\iprofilesettingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|c:\\users\\ibrah\\desktop\\artelio\\artelio.mvc\\artelio.mvc\\migrations\\20250616215059_mig4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644B36D4-184B-4AEA-A680-F745E59E3045}|Artelio.MVC\\Artelio.MVC.csproj|solutionrelative:artelio.mvc\\migrations\\20250616215059_mig4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,132 +358,1047 @@
       "DocumentGroups": [
         {
           "DockedHeight": 550,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Work.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Work.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\Work.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Work.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\Work.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:02:52.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewerProject.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\ViewerProject.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\ViewerProject.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\ViewerProject.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\ViewerProject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:02:38.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SocialMediaLink.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\SocialMediaLink.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\SocialMediaLink.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\SocialMediaLink.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\SocialMediaLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T12:55:37.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Project.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\Project.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Project.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:01:20.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WorkExperience.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\WorkExperience.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\WorkExperience.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\WorkExperience.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\WorkExperience.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T12:56:28.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Follow.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Follow.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\Follow.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Follow.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\Follow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T12:50:39.257Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Education.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Education.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\Education.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Education.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\Education.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T12:50:39.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Award.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Award.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\Award.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Award.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\Award.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T12:49:47.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Profile.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\Profile.cshtml",
+              "ViewState": "AgIAAPoCAAAAAAAAAAAgwAkDAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:06.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Projects.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Projects.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\Projects.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Projects.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\Projects.cshtml",
+              "ViewState": "AgIAAMICAAAAAAAAAAAgwNECAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:33:50.243Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Message.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\Message.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Message.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T12:41:06.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Notification.cs",
               "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\Notification.cs",
               "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\Notification.cs",
               "RelativeToolTip": "Artelio.MVC\\Entities\\Notification.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T10:28:37.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetUserNotificationDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
-              "RelativeToolTip": "Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "Award.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Award.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\Award.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Award.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\Award.cshtml",
+              "ViewState": "AgIAAEABAAAAAAAAAAAgwF0BAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:33:12.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\ServiceRegistration.cs",
+              "RelativeToolTip": "Artelio.MVC\\ServiceRegistration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwD0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T10:27:52.384Z",
+              "WhenOpened": "2025-06-12T11:14:02.703Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
-              "RelativeToolTip": "Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "CreateAward.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateAward.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\CreateAward.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateAward.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\CreateAward.cshtml",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAgwFwBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:35:02.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateEducation.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateEducation.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\CreateEducation.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateEducation.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\CreateEducation.cshtml",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAgwFsBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:54.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Entities\\AppUser.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Entities\\AppUser.cs",
+              "RelativeToolTip": "Artelio.MVC\\Entities\\AppUser.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwB0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T10:25:43.556Z",
+              "WhenOpened": "2025-06-13T12:44:56.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\NotificationService.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\NotificationService.cs",
-              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\NotificationService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Artelio.MVC\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T10:25:42.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T08:22:40.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IProfileService.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
-              "RelativeToolTip": "Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA/wBMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T08:24:33.707Z",
-              "EditorCaption": ""
+              "DocumentIndex": 18,
+              "Title": "CreateExperience.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateExperience.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\CreateExperience.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateExperience.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\CreateExperience.cshtml",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAgwFwBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:50.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProfileService.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileService.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\ProfileService.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileService.cs",
-              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\ProfileService.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAUwM8AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T08:24:54.586Z",
-              "EditorCaption": ""
+              "DocumentIndex": 19,
+              "Title": "CreateLanguage.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateLanguage.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\CreateLanguage.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateLanguage.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\CreateLanguage.cshtml",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAgwFsBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:45.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 20,
+              "Title": "CreateProject.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateProject.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\CreateProject.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateProject.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\CreateProject.cshtml",
+              "ViewState": "AgIAADwBAAAAAAAAAAAgwFkBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:40.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateSkills.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateSkills.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\CreateSkills.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\CreateSkills.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\CreateSkills.cshtml",
+              "ViewState": "AgIAADwBAAAAAAAAAAAgwFkBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:35.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Education.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Education.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\Education.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Education.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\Education.cshtml",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAgwFoBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:31.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAADoBAAAAAAAAAAAwwFoBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T11:54:18.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "Language.cshtml",
               "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Language.cshtml",
               "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\Language.cshtml",
               "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Language.cshtml",
               "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\Language.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwBAAAAAAAAAAAgwFkBAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T10:11:04.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T10:11:04.014Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 25,
+              "Title": "Skills.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Skills.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\Skills.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\Skills.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\Skills.cshtml",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAgwFsBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:34:04.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SocialMedia.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\SocialMedia.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\SocialMedia.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\SocialMedia.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\SocialMedia.cshtml",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAgwFoBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:33:46.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UpdateAward.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\UpdateAward.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\UpdateAward.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\UpdateAward.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\UpdateAward.cshtml",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAgwFoBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:33:42.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UpdateEducation.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\UpdateEducation.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\UpdateEducation.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\UpdateEducation.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\UpdateEducation.cshtml",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAgwFoBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:33:36.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateExperience.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\UpdateExperience.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\UpdateExperience.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\UpdateExperience.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\UpdateExperience.cshtml",
+              "ViewState": "AgIAADwBAAAAAAAAAAAQwFoBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:33:32.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "WorkExperience.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\WorkExperience.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Profile\\WorkExperience.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Profile\\WorkExperience.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Profile\\WorkExperience.cshtml",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAQwFsBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:33:25.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Home\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Home\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Home\\Detail.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Home\\Detail.cshtml",
+              "ViewState": "AgIAACkBAAAAAAAAAAAgwDMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T21:53:17.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Notification\\Index.cshtml",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Notification\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Notification\\Index.cshtml",
-              "RelativeToolTip": "Artelio.MVC\\Views\\Notification\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACgBAAAAAAAAAAAgwDsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T10:10:56.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-15T23:06:31.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 36,
+              "Title": "ArtelioContext.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Contexts\\ArtelioContext.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Contexts\\ArtelioContext.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Contexts\\ArtelioContext.cs",
+              "RelativeToolTip": "Artelio.MVC\\Contexts\\ArtelioContext.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAIBJwDYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:36:16.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProfileSettingService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
+              "ViewState": "AgIAAF4BAAAAAAAAAAAQwHABAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T08:25:38.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\NotificationService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T10:25:42.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Artelio.MVC\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAUCAAAAAAAAAAAkwBcCAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T09:58:45.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EducationConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Configurations\\EducationConfiguration.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Configurations\\EducationConfiguration.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Configurations\\EducationConfiguration.cs",
+              "RelativeToolTip": "Artelio.MVC\\Configurations\\EducationConfiguration.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T12:17:25.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PageNotificationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Notification\\Page\\PageNotificationDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Notification\\Page\\PageNotificationDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Notification\\Page\\PageNotificationDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Notification\\Page\\PageNotificationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T08:18:42.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-24T16:06:22.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CountryEnum.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Enums\\CountryEnum.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Enums\\CountryEnum.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Enums\\CountryEnum.cs",
+              "RelativeToolTip": "Artelio.MVC\\Enums\\CountryEnum.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA5wAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T16:23:25.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Artelio.MVC\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAxwCgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:24:54.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "MessengerController.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\MessengerController.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\MessengerController.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\MessengerController.cs",
+              "RelativeToolTip": "Artelio.MVC\\Controllers\\MessengerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:19:58.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "PageGetMessengerDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Messenger\\Page\\PageGetMessengerDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Messenger\\Page\\PageGetMessengerDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Messenger\\Page\\PageGetMessengerDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Messenger\\Page\\PageGetMessengerDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:45:50.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "Artelio.MVC\\Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAASwBcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T10:05:28.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T10:05:28.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Messenger\\Index.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Messenger\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Messenger\\Index.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Messenger\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwIQAAACgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T11:48:52.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Notification\\Index.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Notification\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Notification\\Index.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Notification\\Index.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCUAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T10:10:56.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Artelio.MVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwCMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T21:53:17.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GetUserNotificationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Notification\\GetUserNotificationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T10:27:52.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\ProfileService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\ProfileService.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAkwNAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T08:24:54.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Interfaces\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T10:25:43.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "PageBasicInfoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageBasicInfoDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageBasicInfoDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageBasicInfoDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageBasicInfoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:53:25.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "PageDetailDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageDetailDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageDetailDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageDetailDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageDetailDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T15:47:16.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwB8AAAAPAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T12:42:55.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "PageHomeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageHomeDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageHomeDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageHomeDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageHomeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T23:44:20.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "PageSocialMediaInfoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageSocialMediaInfoDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageSocialMediaInfoDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageSocialMediaInfoDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageSocialMediaInfoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:53:10.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "PageGetEducationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetEducationDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetEducationDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetEducationDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetEducationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:52:50.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "PageCreateEducationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateEducationDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateEducationDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateEducationDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateEducationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:52:33.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "PageUpdateEducationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateEducationDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateEducationDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateEducationDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateEducationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:52:14.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "PageGetWorkExperienceDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetWorkExperienceDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetWorkExperienceDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetWorkExperienceDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetWorkExperienceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:51:44.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "PageCreateExperienceDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateExperienceDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateExperienceDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateExperienceDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateExperienceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:51:26.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "PageUpdateExperienceDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateExperienceDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateExperienceDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateExperienceDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateExperienceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:51:09.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "PageGetAwardDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAwardDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAwardDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAwardDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAwardDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:50:54.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "PageCreateAwardDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAwardDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAwardDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAwardDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAwardDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:54:22.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "PageUpdateAwardDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateAwardDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateAwardDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateAwardDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageUpdateAwardDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:50:04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "PageGetLanguageDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetLanguageDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetLanguageDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetLanguageDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetLanguageDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:49:40.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "PageCreateLanguageDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateLanguageDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateLanguageDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateLanguageDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateLanguageDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:49:21.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "PageGetAbilityDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAbilityDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAbilityDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAbilityDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageGetAbilityDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:49:04.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "PageCreateAbilityDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAbilityDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAbilityDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAbilityDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateAbilityDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:48:31.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "PageCreateProjectDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateProjectDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateProjectDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateProjectDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageCreateProjectDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:47:41.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "PageProfileProjectDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileProjectDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileProjectDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileProjectDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileProjectDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T10:58:56.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "PageProfileDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Profile\\Page\\PageProfileDTO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA7wBMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T08:47:13.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\AuthService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\AuthService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\AuthService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswEoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T08:26:42.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "IMessageService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IMessageService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Interfaces\\IMessageService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IMessageService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Interfaces\\IMessageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T23:08:49.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Program.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Program.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Program.cs",
+              "RelativeToolTip": "Artelio.MVC\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:13:58.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "GetMessageDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Messenger\\GetMessageDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Messenger\\GetMessageDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Messenger\\GetMessageDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Messenger\\GetMessageDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T13:05:42.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "CreateMessageDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Messenger\\CreateMessageDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Messenger\\CreateMessageDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Messenger\\CreateMessageDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Messenger\\CreateMessageDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T12:57:48.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "CustomUserIdProvider.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\HubService\\CustomUserIdProvider.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\HubService\\CustomUserIdProvider.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\HubService\\CustomUserIdProvider.cs",
+              "RelativeToolTip": "Artelio.MVC\\HubService\\CustomUserIdProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T22:40:02.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "FriendService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\FriendService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\FriendService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\FriendService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\FriendService.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAiwJoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:46:38.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "20250616215059_mig4.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Migrations\\20250616215059_mig4.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Migrations\\20250616215059_mig4.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Migrations\\20250616215059_mig4.cs",
+              "RelativeToolTip": "Artelio.MVC\\Migrations\\20250616215059_mig4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:50:59.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "ErrorPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Error\\ErrorPage.cshtml",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Views\\Error\\ErrorPage.cshtml",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Views\\Error\\ErrorPage.cshtml",
+              "RelativeToolTip": "Artelio.MVC\\Views\\Error\\ErrorPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T23:32:56.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "GetUserFriendsForMessengerDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Friend\\GetUserFriendsForMessengerDTO.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\DTOs\\Friend\\GetUserFriendsForMessengerDTO.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\DTOs\\Friend\\GetUserFriendsForMessengerDTO.cs",
+              "RelativeToolTip": "Artelio.MVC\\DTOs\\Friend\\GetUserFriendsForMessengerDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:43:25.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "AppUserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Configurations\\AppUserConfiguration.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Configurations\\AppUserConfiguration.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Configurations\\AppUserConfiguration.cs",
+              "RelativeToolTip": "Artelio.MVC\\Configurations\\AppUserConfiguration.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAQwF0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T12:45:05.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "IFriendService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IFriendService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Interfaces\\IFriendService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IFriendService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Interfaces\\IFriendService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBAAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:46:42.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "IProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
+              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
+              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
+              "RelativeToolTip": "Artelio.MVC\\Services\\Interfaces\\IProfileService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA7wBMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T08:24:33.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
               "Title": "ErrorController.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\ErrorController.cs",
               "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\ErrorController.cs",
@@ -203,25 +1406,11 @@
               "RelativeToolTip": "Artelio.MVC\\Controllers\\ErrorController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T10:05:07.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T10:05:07.475Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\ProfileController.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "Artelio.MVC\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAJgBAAAAAAAAAAAAwKUBAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T09:58:45.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 85,
               "Title": "IProfileSettingService.cs",
               "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Interfaces\\IProfileSettingService.cs",
               "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Interfaces\\IProfileSettingService.cs",
@@ -230,45 +1419,6 @@
               "ViewState": "AgIAACQAAAAAAAAAAAAowC8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T08:25:43.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ProfileSettingService.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
-              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\ProfileSettingService.cs",
-              "ViewState": "AgIAAF4BAAAAAAAAAAAAAHABAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T08:25:38.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Artelio.MVC\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAkwFcAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T08:22:40.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\AuthService.cs",
-              "RelativeDocumentMoniker": "Artelio.MVC\\Services\\Implements\\AuthService.cs",
-              "ToolTip": "C:\\Users\\ibrah\\Desktop\\Artelio\\Artelio.MVC\\Artelio.MVC\\Services\\Implements\\AuthService.cs",
-              "RelativeToolTip": "Artelio.MVC\\Services\\Implements\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T08:26:42.781Z",
-              "EditorCaption": ""
             }
           ]
         },

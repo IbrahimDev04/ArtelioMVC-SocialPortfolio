@@ -1,0 +1,696 @@
+﻿@using Artelio.MVC.DTOs.Messenger.Page
+@model PageGetMessengerDTO
+
+
+@{
+    Layout = "_AdminLayout";
+}
+<link rel="stylesheet" href="~/assets/mainProfile/css/styles.min.css">
+
+<script src="~/assets/SignalR/ChatHub.js"></script>
+<script src="~/assets/SignalR/jquery.min.js"></script>
+<script src="~/assets/SignalR/signalr.min.js"></script>
+
+<nav class="navbar p-0 fixed-top d-flex flex-row" style="left:0;">
+    <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/assets/profile//images/logo-mini.svg" alt="logo" /></a>
+    </div>
+    <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+        </button>
+        <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item dropdown d-none d-lg-block">
+                    <div style="display:flex;">
+                                        <div>
+                            @if (Model.GetNotReadMessageCount != 0)
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer; text-decoration: none; color: white;"><i class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px; right: 18px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetNotReadMessageCount</p></i></a>
+
+                            }
+                            else
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer;  text-decoration: none; color: white;"><i class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px; right: 18px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
+                            }
+
+                        </div>
+                        <div>
+                            @if (Model.GetFriendRequestCount != 0)
+                            {
+                                <a asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetFriendRequestCount</p></i></a>
+
+                            }else{
+                            <a asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
+
+                            }
+
+                        </div>
+                        <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" asp-action="CreateProject" asp-controller="Profile">+ Create New Project</a>
+                    </div>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
+                    <h6 class="p-3 mb-0">Projects</h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i class="mdi mdi-file-outline text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject ellipsis mb-1">Software Development</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i class="mdi mdi-web text-info"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject ellipsis mb-1">UI Development</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i class="mdi mdi-layers text-danger"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject ellipsis mb-1">Software Testing</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <p class="p-3 mb-0 text-center">See all projects</p>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+                    <div class="navbar-profile">
+                        <img class="img-xs rounded-circle" src="~/@Model.GetUserInfoDTO.ImageUrl" alt="">
+                        <p class="mb-0 d-none d-sm-block navbar-profile-name">@Model.GetUserInfoDTO.FullName</p>
+                        <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                    <h6 class="p-3 mb-0">Profile</h6>
+                    <div class="dropdown-divider"></div>
+                    <a asp-action="Index" asp-controller="profile" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i style="color:green;" class="fa-solid fa-gear"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject mb-1">Settings</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a asp-action="LogOut" asp-controller="Account" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i style="color: red;" class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject mb-1">Log out</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+
+                </div>
+            </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+        </button>
+    </div>
+</nav>
+
+<div id="toast" style="display:none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background-color: #333; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px; z-index: 9999; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+            <div class="content-wrapper" style="background-color: #191c24;">
+                <div class="page-header">
+                </div>
+                <div class="account-hub-content">
+                    <!-- SECTION HEADER -->
+                    <div class="section-header">
+                        <!-- SECTION HEADER INFO -->
+                        <div class="section-header-info">
+                            <!-- SECTION PRETITLE -->
+                            <p class="section-pretitle">My Profile</p>
+                            <!-- /SECTION PRETITLE -->
+                            <!-- SECTION TITLE -->
+                            <h2 class="section-title">Messages</h2>
+                            <!-- /SECTION TITLE -->
+                        </div>
+                        <!-- /SECTION HEADER INFO -->
+                    </div>
+                    <!-- /SECTION HEADER -->
+                    <!-- CHAT WIDGET WRAP -->
+                    <div class="chat-widget-wrap">
+                        <!-- CHAT WIDGET -->
+                        <div class="chat-widget static">
+                            <!-- CHAT WIDGET MESSAGES -->
+                            <div class="chat-widget-messages" data-simplebar="init">
+                                <div class="simplebar-wrapper" style="margin: 0px;">
+                                    <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
+                                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                            <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                                                <div class="simplebar-content" style="padding: 0px;">
+                                                    @foreach (var item in Model.Friends)
+                                                    {
+                                                        <a style="text-decoration: none;" asp-action="Index" asp-controller="Messenger" asp-route-recieveUser="@item.UserId">
+                                                            <div class="chat-widget-message @item.UserId">
+                                                        <!-- USER STATUS -->
+                                                        <div class="user-status">
+                                                            <!-- USER STATUS AVATAR -->
+                                                            <div class="user-status-avatar">
+                                                                <!-- USER AVATAR -->
+                                                                <div class="user-avatar small no-outline">
+                                                                    <!-- USER AVATAR CONTENT -->
+                                                                    <div class="user-avatar-content">
+                                                                        <!-- HEXAGON -->
+                                                                        <div class="hexagon-image-30-32" data-src="~/@item.ImageUrl" style="width: 30px; height: 32px; position: relative;"><canvas width="30" height="32" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                                        <!-- /HEXAGON -->
+                                                                    </div>
+                                                                    <!-- /USER AVATAR CONTENT -->
+                                                                    <!-- USER AVATAR PROGRESS -->
+                                                                    <div class="user-avatar-progress">
+                                                                        <!-- HEXAGON -->
+                                                                                <div id="@item.UserId" class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;">
+                                                                            <img style="width: 100%; height: 90%; border-radius: 100%;" src="~/@item.ImageUrl" alt="Alternate Text" />
+                                                                                    <span class="online-dot" style="left:30px; position: absolute; width: 10px; height: 10px; border-radius: 50%; background-color: green; display: none;"></span>
+
+                                                                            </div>
+                                                                        <div style="width:20px; height:20px; color:green;"></div>
+                                                                        <!-- /HEXAGON -->
+                                                                    </div>
+                                                                    <!-- /USER AVATAR PROGRESS -->
+                                                                    <!-- USER AVATAR PROGRESS BORDER -->
+                                                                    <div class="user-avatar-progress-border">
+                                                                        <!-- HEXAGON -->
+                                                                        <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                                        <!-- /HEXAGON -->
+                                                                    </div>
+                                                                    <!-- /USER AVATAR PROGRESS BORDER -->
+                                                                    <!-- USER AVATAR BADGE -->
+                                                                    <div class="user-avatar-badge">
+                                                                        <!-- USER AVATAR BADGE BORDER -->
+                                                                        <div class="user-avatar-badge-border">
+                                                                            <!-- HEXAGON -->
+                                                                            <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                                            <!-- /HEXAGON -->
+                                                                        </div>
+                                                                        <!-- /USER AVATAR BADGE BORDER -->
+                                                                        <!-- USER AVATAR BADGE CONTENT -->
+                                                                        <div class="user-avatar-badge-content">
+                                                                            <!-- HEXAGON -->
+                                                                            <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                                            <!-- /HEXAGON -->
+                                                                        </div>
+                                                                        <!-- /USER AVATAR BADGE CONTENT -->
+                                                                    </div>
+                                                                    <!-- /USER AVATAR BADGE -->
+                                                                </div>
+                                                                <!-- /USER AVATAR -->
+                                                            </div>
+                                                            <!-- /USER STATUS AVATAR -->
+                                                            <!-- USER STATUS TITLE -->
+                                                            <p style="margin-bottom: 3px;" class="user-status-title"><span class="bold">@item.UserName</span></p>
+                                                            <p style="color: rgba(255, 255, 255, 0.5);">@item.LastMessageContent</p>
+                                                            <!-- /USER STATUS TEXT -->
+                                                        </div>
+                                                        <!-- /USER STATUS -->
+                                                    </div>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="simplebar-placeholder" style="width: auto; height: 924px;"></div>
+                                </div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 374px; transform: translate3d(0px, 152px, 0px); display: block;"></div></div>
+                            </div>
+                            <!-- /CHAT WIDGET MESSAGES -->
+                        </div>
+                        <!-- /CHAT WIDGET -->
+                        <!-- CHAT WIDGET -->
+                                                            @if (Model.RecieveUserId != null)
+                        {
+                                                    <div class="chat-widget">
+                            <!-- CHAT WIDGET HEADER -->
+                            <div class="chat-widget-header">
+                                <!-- CHAT WIDGET SETTINGS -->
+                                <div class="chat-widget-settings">
+                                    <!-- POST SETTINGS WRAP -->
+                                    <div class="post-settings-wrap" style="position: relative;">
+                                        <!-- POST SETTINGS -->
+                                        <div class="post-settings widget-box-post-settings-dropdown-trigger">
+                                            <!-- POST SETTINGS ICON -->
+                                            <svg class="post-settings-icon icon-more-dots">
+                                                <use xlink:href="#svg-more-dots"></use>
+                                            </svg>
+                                            <!-- /POST SETTINGS ICON -->
+                                        </div>
+                                        <!-- /POST SETTINGS -->
+                                        <!-- SIMPLE DROPDOWN -->
+                                        <div class="simple-dropdown widget-box-post-settings-dropdown" style="position: absolute; z-index: 9999; top: 30px; right: 9px; opacity: 0; visibility: hidden; transform: translate(0px, -20px); transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;">
+                                            <!-- SIMPLE DROPDOWN LINK -->
+                                            <p class="simple-dropdown-link">Report</p>
+                                            <!-- /SIMPLE DROPDOWN LINK -->
+                                            <!-- SIMPLE DROPDOWN LINK -->
+                                            <p class="simple-dropdown-link">Block</p>
+                                            <!-- /SIMPLE DROPDOWN LINK -->
+                                            <!-- SIMPLE DROPDOWN LINK -->
+                                            <p class="simple-dropdown-link">Mute</p>
+                                            <!-- /SIMPLE DROPDOWN LINK -->
+                                        </div>
+                                        <!-- /SIMPLE DROPDOWN -->
+                                    </div>
+                                    <!-- /POST SETTINGS WRAP -->
+                                </div>
+                                <!-- CHAT WIDGET SETTINGS -->
+                                <!-- USER STATUS -->
+                                    <a asp-action="Profile" asp-controller="Profile" asp-route-userId="@Model.GetRecieveUserDTO.Id">
+                                        <div class="user-status">
+
+                                            <!-- USER STATUS AVATAR -->
+                                            <div class="user-status-avatar">
+                                                <!-- USER AVATAR -->
+                                                <div class="user-avatar small no-outline">
+                                                    <!-- USER AVATAR CONTENT -->
+                                                    <div class="user-avatar-content">
+                                                        <!-- HEXAGON -->
+                                                        <div class="hexagon-image-30-32" data-src="img/avatar/03.jpg" style="width: 30px; height: 32px; position: relative;"><canvas width="30" height="32" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                        <!-- /HEXAGON -->
+                                                    </div>
+                                                    <!-- /USER AVATAR CONTENT -->
+                                                    <!-- USER AVATAR PROGRESS -->
+                                                    <div class="user-avatar-progress">
+                                                        <!-- HEXAGON -->
+                                                        <div class="hexagon-progress-40-44" style="width: 40px; height: 44px; position: relative;">
+                                                            <img style="width: 100%; height: 90%; border-radius: 100%;" src="~/@Model.GetRecieveUserDTO.ImageUrl" alt="Alternate Text" />
+                                                        </div>
+                                                        <!-- /HEXAGON -->
+                                                    </div>
+                                                    <!-- /USER AVATAR PROGRESS -->
+                                                    <!-- USER AVATAR PROGRESS BORDER -->
+                                                    <div class="user-avatar-progress-border">
+                                                        <!-- HEXAGON -->
+                                                        <div class="hexagon-border-40-44" style="width: 40px; height: 44px; position: relative;"><canvas width="40" height="44" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                        <!-- /HEXAGON -->
+                                                    </div>
+                                                    <!-- /USER AVATAR PROGRESS BORDER -->
+                                                    <!-- USER AVATAR BADGE -->
+                                                    <div class="user-avatar-badge">
+                                                        <!-- USER AVATAR BADGE BORDER -->
+                                                        <div class="user-avatar-badge-border">
+                                                            <!-- HEXAGON -->
+                                                            <div class="hexagon-22-24" style="width: 22px; height: 24px; position: relative;"><canvas width="22" height="24" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                            <!-- /HEXAGON -->
+                                                        </div>
+                                                        <!-- /USER AVATAR BADGE BORDER -->
+                                                        <!-- USER AVATAR BADGE CONTENT -->
+                                                        <div class="user-avatar-badge-content">
+                                                            <!-- HEXAGON -->
+                                                            <div class="hexagon-dark-16-18" style="width: 16px; height: 18px; position: relative;"><canvas width="16" height="18" style="position: absolute; top: 0px; left: 0px;"></canvas></div>
+                                                            <!-- /HEXAGON -->
+                                                        </div>
+                                                        <!-- /USER AVATAR BADGE CONTENT -->
+                                                        <!-- USER AVATAR BADGE TEXT -->
+                                                        <!-- /USER AVATAR BADGE TEXT -->
+                                                    </div>
+                                                    <!-- /USER AVATAR BADGE -->
+                                                </div>
+                                                <!-- /USER AVATAR -->
+                                            </div>
+                                            <!-- /USER STATUS AVATAR -->
+                                            <!-- USER STATUS TITLE -->
+                                            <p class="user-status-title"><span class="bold">@Model.GetRecieveUserDTO.UserName</span></p>
+                                            <!-- /USER STATUS TITLE -->
+                                            <!-- USER STATUS TAG -->
+                                            <!-- /USER STATUS TAG -->
+
+
+                                        </div>
+                                </a>
+
+
+                                                                    
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /CHAT WIDGET HEADER -->
+                            <!-- CHAT WIDGET CONVERSATION -->
+                            <div class="chat-widget-conversation" data-simplebar="init">
+                                <div class="simplebar-wrapper" style="margin: -35px -28px;">
+                                    <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
+                                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                            <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
+                                                <style>
+                                                    .scrollable{
+                                                        overflow-y: scroll;
+                                                        height: 100%;
+                                                        scrollbar-width: thin;
+                                                        scrollbar-color: #2f3749 rgba(128,128,128,0.0);
+                                                    }
+
+
+                                                    ::-webkit-scrollbar {
+                                                        width: 10px;
+                                                    }
+
+                                                    ::-webkit-scrollbar-thumb {
+                                                        background-color: #000000;
+                                                        border-radius: 5px;
+                                                    }
+
+                                                    ::-webkit-scrollbar-track {
+                                                        background: #000000;
+                                                    }
+                                                </style>
+                                                <div id="scrollable" class="simplebar-content scrollable messages-value" style="padding: 35px 28px;">
+                                                        @{
+                                                            string? lastDate = null;
+                                                        }
+                                                        @foreach (var item in Model.Messages)
+                                                        {
+                                                            if (item.Day != lastDate)
+                                                            {
+                                                                <div class="message-date" style="text-align: center; margin: 10px 0; font-weight: bold;">@item.Day</div>
+                                                                lastDate = item.Day;
+                                                            }
+
+                                                            if (item.FromId == Model.CurrentUserId && item.ToId == Model.RecieveUserId)
+                                                            {
+                                                                <div class="chat-widget-speaker right">
+                                                                    <p style="word-break: break-all; overflow-wrap: break-word; margin:5px !important;" class="chat-widget-speaker-message">@item.MessageContent</p>
+                                                                    <div style="display: flex;">
+                                                                        <p class="right" style="font-size:10px; padding-right: 25px;">@item.Hour</p>
+                                                                        @{
+                                                                            var checkColor = item.IsRead ? "green" : "gray";
+                                                                        }
+                                                                        <p id="status-@item.Id" class="left" style="font-size: 8px; color: @checkColor;">✓✓</p>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="chat-widget-speaker left">
+                                                                    <p style="word-break: break-all; overflow-wrap: break-word; margin:5px !important;" class="chat-widget-speaker-message">@item.MessageContent</p>
+                                                                    <p class="left" style="font-size:10px;">@item.Hour</p>
+                                                                </div>
+                                                            }
+                                                        }
+                                                    </div>
+
+
+
+
+                                                <script>
+                                                      window.onload = function() {
+                                                        const scrollable = document.getElementById("scrollable");
+                                                        scrollable.scrollTop = scrollable.scrollHeight;
+                                                      };
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div><div class="simplebar-placeholder" style="width: auto; height: 414px;"></div>
+
+                                </div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; transform: translate3d(0px, 0px, 0px); display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none; transform: translate3d(0px, 0px, 0px);"></div></div>
+
+                                    <div id="typing-indicator" style="font-style: italic; position: relative; top: 15px; font-size: 17px; color: rgba(255, 255, 255, 0.5);"></div>
+
+                            </div>
+                            <!-- /CHAT WIDGET CONVERSATION -->
+
+                            <!-- CHAT WIDGET FORM -->
+                            <div class="chat-widget-form">
+
+                                <!-- FORM ROW -->
+                                <div class="form-row split">
+                                    <!-- FORM ITEM -->
+                                    <div class="form-item">
+                                        <!-- INTERACTIVE INPUT -->
+                                        <div class="interactive-input small">
+                                            <style>
+                                                    .chat-input-container {
+                                                        position: relative;
+                                                    }
+
+                                                    .auto-grow {
+                                                        position: absolute;
+                                                        bottom: 0;
+                                                        left: 0;
+                                                        width: 100%;
+                                                        resize: none;
+                                                        overflow: hidden;
+                                                        min-height: 30px;
+                                                        max-height: 150px;
+                                                        padding: 8px;
+                                                        box-sizing: border-box;
+                                                        overflow-y: auto;
+                                                        scrollbar-width: thin;
+                                                        scrollbar-color: #2f3749 rgba(128,128,128,0.0);
+                                                        
+                                                    }
+                                            </style>
+                                                <textarea class="text-area-value auto-grow chat-input-container" type="text" id="chat-widget-message-text-2" name="chat_widget_message_text_2" placeholder="Write a message..."></textarea>
+                                                <!-- INTERACTIVE INPUT ICON WRAP -->
+                                            <div class="interactive-input-icon-wrap actionable">
+                                                <!-- TOOLTIP WRAP -->
+                                                <div class="tooltip-wrap text-tooltip-tft" data-title="Send Photo" style="position: relative;">
+                                                    <!-- INTERACTIVE INPUT ICON -->
+                                                    <svg class="interactive-input-icon icon-camera">
+                                                        <use xlink:href="#svg-camera"></use>
+                                                    </svg>
+                                                    <!-- /INTERACTIVE INPUT ICON -->
+                                                    <div class="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -40.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: 0.3s ease-in-out;"><p class="xm-tooltip-text">Send Photo</p></div>
+                                                </div>
+                                                <!-- /TOOLTIP WRAP -->
+                                            </div>
+                                            <!-- /INTERACTIVE INPUT ICON WRAP -->
+                                            <!-- INTERACTIVE INPUT ACTION -->
+                                            <div class="interactive-input-action">
+                                                <!-- INTERACTIVE INPUT ACTION ICON -->
+                                                <svg class="interactive-input-action-icon icon-cross-thin">
+                                                    <use xlink:href="#svg-cross-thin"></use>
+                                                </svg>
+                                                <!-- /INTERACTIVE INPUT ACTION ICON -->
+                                            </div>
+                                            <!-- /INTERACTIVE INPUT ACTION -->
+                                        </div>
+                                        <!-- /INTERACTIVE INPUT -->
+                                    </div>
+                                    <!-- /FORM ITEM -->
+                                    <!-- FORM ITEM -->
+                                    <div class="form-item auto-width">
+                                        <!-- BUTTON -->
+                                        <p class="button primary padded btn-send-message">
+                                            <!-- BUTTON ICON -->
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                            <!-- /BUTTON ICON -->
+                                        </p>
+                                        <!-- /BUTTON -->
+                                    </div>
+                                    <!-- /FORM ITEM -->
+                                </div>
+                                <!-- /FORM ROW -->
+                            </div>
+                            <!-- /CHAT WIDGET FORM -->
+                        </div>
+                        <!-- /CHAT WIDGET -->
+                        }
+
+                    </div>
+                    <!-- /CHAT WIDGET WRAP -->
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+
+<script>
+    function showToast(message) {
+                const toast = $("#toast");
+                toast.text(message).fadeIn(400);
+
+                setTimeout(() => {
+                    toast.fadeOut(400);
+                }, 5000); // 5 saniyə göstərilir
+            }
+
+    $(document).ready(() => {
+        var connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chathub")
+            .build();
+
+            connection.start().then(function () {
+                var currentUserId = @Html.Raw(Json.Serialize(Model.CurrentUserId));
+                var recieveUserId = @Html.Raw(Json.Serialize(Model.RecieveUserId));
+                // Saytda olan dostları soruş
+                connection.invoke("GetOnlineFriends", currentUserId)
+                    .then(function (onlineFriends) {
+                        onlineFriends.forEach(function (friendId) {
+                            const friendElement = $("#" + friendId);
+                            if (friendElement.length > 0) {
+                                friendElement.find(".online-dot").show();
+                            }
+                        });
+                    });
+
+
+                connection.invoke("MarkAsRead", recieveUserId, currentUserId)
+                    .catch(err => console.error(err));
+
+                connection.invoke("SetCurrentChat", currentUserId, recieveUserId)
+                    .catch(err => console.error(err));
+
+
+            });
+
+        // Auto-grow textarea
+        $(".auto-grow").on("input", function () {
+            this.style.height = "auto";
+            this.style.height = this.scrollHeight + "px";
+        });
+
+        // Yeni: Yazır funksiyası üçün timeout
+        let typingTimeout;
+
+        // Yazır mesajını göstərən element əlavə edin HTML-də (sonra html hissədə qoyacağıq)
+
+        // Yazı yazarkən "TypingAsync" metodunu çağır
+        $(".text-area-value").on("input", function () {
+            var currentUserId = @Html.Raw(Json.Serialize(Model.CurrentUserId));
+            var recieveUserId = @Html.Raw(Json.Serialize(Model.RecieveUserId));
+
+            connection.invoke("TypingAsync", currentUserId, recieveUserId)
+            .catch(err => console.error(err));
+        });
+
+        $(".btn-send-message").click(() => {
+            var message = $(".text-area-value").val();
+            var currentUserId = @Html.Raw(Json.Serialize(Model.CurrentUserId));
+            var recieveUserId = @Html.Raw(Json.Serialize(Model.RecieveUserId));
+            var date = new Date();
+
+            connection.invoke("SendMessageAsync", message, currentUserId, recieveUserId, date)
+                .then(messageId => {
+                    // Mesajı dərhal göstəririk
+                    const myMessage = $(`
+                        <div class="chat-widget-speaker right">
+                            <p style="word-break: break-all; overflow-wrap: break-word; margin:5px !important;" class="chat-widget-speaker-message">${message}</p>
+                            <div style="display: flex;">
+                                <p class="right" style="font-size:10px; padding-right: 25px;">${date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+                                <p id="status-${messageId}" class="left" style="font-size: 8px; color: gray;">✓✓</p>
+                            </div>
+                        </div>
+                    `);
+                    $(".messages-value").append(myMessage);
+
+                    // Scroll to bottom
+                    const container = $(".messages-value");
+                    container.scrollTop(container[0].scrollHeight);
+
+                    // Clear input
+                    $(".text-area-value").val('');
+                })
+                .catch(error => console.error(error));
+        });
+
+        connection.on("recieveMessage", function (message, currentUserId, recieveUserId, hour, day, messageId) {
+            const queryString = window.location.search;
+
+            if (recieveUserId == queryString.substring(13)) {
+                const container = $(".messages-value");
+
+                // Əgər gün başlığı yoxdursa, əlavə et
+                const lastDate = container.find(".message-date").last().text();
+                if (lastDate !== day) {
+                    const dateDiv = $(`<div class="message-date" style="text-align: center; margin: 10px 0; font-weight: bold;">${day}</div>`);
+                    container.append(dateDiv);
+                }
+
+                const otherMessage = $(`
+                    <div class="chat-widget-speaker left">
+                        <p style="margin: 5px !important; word-break: break-all; overflow-wrap: break-word;" class="chat-widget-speaker-message">${message}</p>
+                        <p class="left" style="font-size:10px;">${hour}</p>
+                    </div>
+                `);
+                container.append(otherMessage);
+                container.scrollTop(container[0].scrollHeight);
+            }
+        });
+
+        // Yazır mesajını göstər
+        connection.on("showTyping", function (fromUserId, toUserId) {
+
+            var id1 = @Html.Raw(Json.Serialize(Model.CurrentUserId));
+            var id2 = @Html.Raw(Json.Serialize(Model.RecieveUserId));
+            if(id2 == fromUserId & id1 == toUserId){
+                            const indicator = $("#typing-indicator");
+            indicator.text("Writing...");
+            clearTimeout(typingTimeout);
+            typingTimeout = setTimeout(() => {
+                indicator.text("");
+            }, 2000);
+            }
+
+        });
+    connection.on("friendOnline", function (friendId) {
+        const friendElement = $("#" + friendId);
+        if (friendElement.length > 0) {
+            friendElement.find(".online-dot").show();
+        }
+    });
+            connection.on("messageStatus", function (messageId, isSeen) {
+                setTimeout(() => {
+                    const el = $("#status-" + messageId);
+                    if (el.length > 0) {
+                        const color = isSeen ? "green" : "gray";
+                        el.css("color", color);
+                    } else {
+                        console.warn("Status element tapılmadı:", messageId);
+                    }
+                }, 300); // 300ms gecikmə, DOM yaranana qədər vaxt
+            });
+
+    connection.on("messageSeen", function (messageId) {
+        $("#status-" + messageId).css("color", "green");
+    });
+
+                    connection.on("unreadMessageAlert", function(messageId, fromUserId) {
+                    showToast("Yeni mesajınız var!");
+                });
+
+
+    connection.on("friendOffline", function (friendId) {
+        const friendElement = $("#" + friendId);
+        if (friendElement.length > 0) {
+            friendElement.find(".online-dot").hide();
+        }
+    });
+
+        // Enter basanda mesaj göndər
+        $(".text-area-value").keydown(function (e) {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                $(".btn-send-message").click();
+            }
+        });
+
+        var RecieveUserId = @Html.Raw(Json.Serialize(Model.RecieveUserId));
+        $("." + RecieveUserId).addClass("active");
+    });
+</script>

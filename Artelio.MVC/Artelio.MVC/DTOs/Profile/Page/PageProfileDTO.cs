@@ -17,6 +17,7 @@ namespace Artelio.MVC.DTOs.Profile.Page
 
 
         public int GetFriendRequestCount { get; set; }
+        public int GetNotReadMessageCount { get; set; }
 
         public int GetAllViewer { get; set; }
         public int GetPostCount { get; set; }

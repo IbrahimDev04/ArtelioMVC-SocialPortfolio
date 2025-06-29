@@ -16,14 +16,27 @@ namespace Artelio.MVC.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginDTO dto)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             if (!ModelState.IsValid) return View(dto);
             AppUser user = null;
+
             try
             {
                 user = await _authService.CheckUser(dto);
@@ -53,18 +66,30 @@ namespace Artelio.MVC.Controllers
                 return View(dto);
             }
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
         public IActionResult Register()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterDTO dto)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             if (!ModelState.IsValid) return View(dto);
 
             AppUser user = null;
@@ -93,6 +118,12 @@ namespace Artelio.MVC.Controllers
 
         public async Task<IActionResult> ConfirmeEmail(string token, string email)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             await _authService.ConfirmeEmail(token, email);
 
             return RedirectToAction("login");
@@ -101,6 +132,12 @@ namespace Artelio.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> FogotPassword()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
@@ -108,6 +145,12 @@ namespace Artelio.MVC.Controllers
 
         public async Task<IActionResult> FogotPassword(GetEmailDTO dto)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             if (!ModelState.IsValid) return View(dto);
 
             var user = await _userManager.FindByEmailAsync(dto.Email);
@@ -128,12 +171,24 @@ namespace Artelio.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> ResetPassword(string token, string email)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> ResetPassword(string token, string email, ResetPasswordDTO dto)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Əgər login olubsa, əsas səhifəyə yönləndir
+                return RedirectToAction("Index", "Home");
+            }
+
             if (!ModelState.IsValid) return View(dto);
 
             await _authService.ResetPassword(token, email, dto.NewPassword);

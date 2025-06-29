@@ -105,93 +105,125 @@
 
     <nav class="navbar p-0 fixed-top d-flex flex-row" style="left:0;">
         <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/assets/profile//images/logo-mini.svg" alt="logo" /></a>
+            <a asp-action="index" asp-controller="home" class="navbar-brand brand-logo-mini"><img src="~/assets/logo/logo.png" alt="logo" /></a>
         </div>
-        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
 
-            <ul class="navbar-nav navbar-nav-right">
-                <li class="nav-item dropdown d-none d-lg-block">
-                    <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" asp-action="CreateProject" asp-controller="Profile">+ Create New Project</a>
-                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
-                        <h6 class="p-3 mb-0">Projects</h6>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-dark rounded-circle">
-                                    <i class="mdi mdi-file-outline text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content">
-                                <p class="preview-subject ellipsis mb-1">Software Development</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-dark rounded-circle">
-                                    <i class="mdi mdi-web text-info"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content">
-                                <p class="preview-subject ellipsis mb-1">UI Development</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-dark rounded-circle">
-                                    <i class="mdi mdi-layers text-danger"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content">
-                                <p class="preview-subject ellipsis mb-1">Software Testing</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <p class="p-3 mb-0 text-center">See all projects</p>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
-                        <div class="navbar-profile">
-                            <img class="img-xs rounded-circle" src="~/@Model.GetUserInfoDTO.ImageUrl" alt="">
-                            <p class="mb-0 d-none d-sm-block navbar-profile-name">@Model.GetUserInfoDTO.FullName</p>
-                            <i class="fa-solid fa-caret-down" style="padding:3px;"></i>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                                <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-lg-start" style="padding-top:10px; margin-left: 30px;">
+            <a asp-action="index" asp-controller="home" class="sidebar-brand brand-logo"><img style="width:50px; height:50px;" src="~/assets/logo/logo.png" alt="logo" /></a>
+        </div>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown d-none d-lg-block">
+                                            <div style="display:flex;">
+                                                                        <div>
+                            @if (Model.GetNotReadMessageCount != 0)
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer; text-decoration: none; color: white;"><i class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px; right: 18px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetNotReadMessageCount</p></i></a>
+
+                            }
+                            else
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer;  text-decoration: none; color: white;"><i class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px; right: 18px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
+                            }
+
                         </div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
-                        <h6 class="p-3 mb-0">Profile</h6>
-                        <div class="dropdown-divider"></div>
-                        <a asp-action="Index" asp-controller="profile" class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-dark rounded-circle">
-                                    <i style="color:green;" class="fa-solid fa-gear"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content">
-                                <p class="preview-subject mb-1">Settings</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a asp-action="LogOut" asp-controller="Account" class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <div class="preview-icon bg-dark rounded-circle">
-                                    <i style="color: red;" class="fa-solid fa-right-from-bracket"></i>
-                                </div>
-                            </div>
-                            <div class="preview-item-content">
-                                <p class="preview-subject mb-1">Log out</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-divider"></div>
+                        <div>
+                            @if (Model.GetFriendRequestCount != 0)
+                            {
+                                <a asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetFriendRequestCount</p></i></a>
 
+                            }else{
+                            <a asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
+
+                            }
+
+                        </div>
+                        <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" asp-action="CreateProject" asp-controller="Profile">+ Create New Project</a>
                     </div>
-                </li>
-            </ul>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                <span class="mdi mdi-format-line-spacing"></span>
-            </button>
-        </div>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
+                            <h6 class="p-3 mb-0">Projects</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-file-outline text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject ellipsis mb-1">Software Development</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-web text-info"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject ellipsis mb-1">UI Development</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-layers text-danger"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject ellipsis mb-1">Software Testing</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <p class="p-3 mb-0 text-center">See all projects</p>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+                            <div class="navbar-profile">
+                                <img class="img-xs rounded-circle" src="~/@Model.GetUserInfoDTO.ImageUrl" alt="">
+                                <p class="mb-0 d-none d-sm-block navbar-profile-name">@Model.GetUserInfoDTO.FullName</p>
+                                <i class="fa-solid fa-caret-down" style="padding:3px;"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                            <h6 class="p-3 mb-0">Profile</h6>
+                            <div class="dropdown-divider"></div>
+                            <a asp-action="Index" asp-controller="profile" class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i style="color:green;" class="fa-solid fa-gear"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject mb-1">Settings</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a asp-action="LogOut" asp-controller="Account" class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i style="color: red;" class="fa-solid fa-right-from-bracket"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject mb-1">Log out</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="mdi mdi-format-line-spacing"></span>
+                </button>
+            </div>
+        }
+
     </nav>
 
     <!-- CHAT WIDGET -->
@@ -447,6 +479,8 @@
         <!-- /BAR ACTIONS -->
     </aside>
     <!-- /FLOATY BAR -->
+    <div id="toast" style="display:none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background-color: #333; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px; z-index: 9999; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
     <!-- CONTENT GRID -->
     <div class="content-grid" style="padding-left: 10px; padding-right:10px; padding-top: 100px">
         <!-- PROFILE HEADER -->
@@ -609,7 +643,7 @@
                     <!-- USER STAT -->
                     <div class="user-stat big">
                         <!-- USER STAT TITLE -->
-                        <p class="user-stat-title">82</p>
+                        <p class="user-stat-title">@Model.GetFriendCount</p>
                         <!-- /USER STAT TITLE -->
                         <!-- USER STAT TEXT -->
                         <p class="user-stat-text">friends</p>
@@ -629,12 +663,39 @@
 
                 </div>
                 <!-- /USER STATS -->
-                @if (Model.GetUserInfoDTO.Id != Model.GetUserProfileDTO.Id)
+                @if (User.Identity.IsAuthenticated)
                 {
-                    <div class="profile-header-info-actions">
-                        <p class="profile-header-info-action button secondary"><span class="hide-text-mobile">Add</span> Friend +</p>
-                        <p class="profile-header-info-action button primary"><span class="hide-text-mobile">Send</span> Message</p>
-                    </div>
+                    @if (Model.GetUserInfoDTO.Id != Model.GetUserProfileDTO.Id)
+                    {
+                        <div class="profile-header-info-actions">
+
+                            @if (Model.isTakeFriendRequest != true)
+                            {
+                                @if (Model.isSendFriendRequest == true)
+                                {
+                                    <a style="text-decoration:none;" asp-action="RejectFriendRequest" asp-controller="Friend" asp-route-following="@Model.GetUserInfoDTO.Id" asp-route-followed="@Model.GetUserProfileDTO.Id" class="profile-header-info-action button secondary">Cancel Request</a>
+                                }
+                                else if (Model.isFriendRequest == true)
+                                {
+                                    <a style="text-decoration:none;" asp-action="UnfriendRequest" asp-controller="Friend" asp-route-following="@Model.GetUserInfoDTO.Id" asp-route-followed="@Model.GetUserProfileDTO.Id" class="profile-header-info-action button secondary">Unfriend -</a>
+                                }
+                                else
+                                {
+                                    <a style="text-decoration:none;" asp-action="SendFriendRequest" asp-controller="Friend" asp-route-following="@Model.GetUserInfoDTO.Id" asp-route-followed="@Model.GetUserProfileDTO.Id" class="profile-header-info-action button secondary"><span class="hide-text-mobile">Add</span> Friend +</a>
+                                }
+
+                            }
+                            else
+                            {
+                                <a style="text-decoration:none;" asp-action="AcceptFriendRequest" asp-controller="Friend" asp-route-following="@Model.GetUserInfoDTO.Id" asp-route-followed="@Model.GetUserProfileDTO.Id" class="profile-header-info-action button secondary">Accept +</a>
+                                <a style="text-decoration:none;" asp-action="RejectFriendRequest" asp-controller="Friend" asp-route-followed="@Model.GetUserInfoDTO.Id" asp-route-following="@Model.GetUserProfileDTO.Id" class="profile-header-info-action button secondary">Reject -</a>
+                            }
+
+                            <a class="profile-header-info-action button primary"><span class="hide-text-mobile">Send</span> Message</a>
+
+                        </div>
+                    }
+
                 }
 
             </div>
@@ -658,24 +719,6 @@
                         <use xlink:href="#svg-videos"></use>
                     </svg>
                     <p class="section-menu-item-text">Projects</p>
-                </a>
-                <a class="section-menu-item" href="~/assets/mainProfile/profile-groups.html">
-                    <svg class="section-menu-item-icon icon-group">
-                        <use xlink:href="#svg-group"></use>
-                    </svg>
-                    <p class="section-menu-item-text">Groups</p>
-                </a>
-                <a class="section-menu-item" href="~/assets/mainProfile/profile-photos.html">
-                    <svg class="section-menu-item-icon icon-photos">
-                        <use xlink:href="#svg-photos"></use>
-                    </svg>
-                    <p class="section-menu-item-text">Photos</p>
-                </a>
-                <a class="section-menu-item" href="~/assets/mainProfile/profile-videos.html">
-                    <svg class="section-menu-item-icon icon-friend">
-                        <use xlink:href="#svg-friend"></use>
-                    </svg>
-                    <p class="section-menu-item-text">Friends</p>
                 </a>
 
             </div>
@@ -813,6 +856,51 @@
 
 
     <script src="~/assets/profile//vendors/js/vendor.bundle.base.js"></script>
+
+    <script src="~/assets/SignalR/ChatHub.js"></script>
+    <script src="~/assets/SignalR/jquery.min.js"></script>
+    <script src="~/assets/SignalR/signalr.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("/chathub")
+                .withAutomaticReconnect()
+                .build();
+
+            connection.start().then(() => {
+                console.log("SignalR bağlantısı quruldu");
+                // Bildiriş icazəsini soruşuruq
+                if ("Notification" in window && Notification.permission !== "granted") {
+                    Notification.requestPermission();
+                }
+            }).catch(err => console.error(err));
+
+            function showToast(message) {
+                const toast = $("#toast");
+                toast.text(message).fadeIn(400);
+
+                setTimeout(() => {
+                    toast.fadeOut(400);
+                }, 5000); // 5 saniyə göstərilir
+            }
+
+            $(document).ready(() => {
+                const connection = new signalR.HubConnectionBuilder()
+                    .withUrl("/chathub")
+                    .withAutomaticReconnect()
+                    .build();
+
+                connection.start().then(() => {
+                    console.log("SignalR bağlantısı quruldu");
+                }).catch(err => console.error(err));
+
+                connection.on("unreadMessageAlert", function(messageId, fromUserId) {
+                    showToast("Yeni mesajınız var!");
+                });
+            });
+        })
+    </script>
 
 </body>
 </html>

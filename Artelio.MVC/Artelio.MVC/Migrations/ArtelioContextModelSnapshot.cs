@@ -248,6 +248,44 @@ namespace Artelio.MVC.Migrations
                     b.ToTable("Follows");
                 });
 
+            modelBuilder.Entity("Artelio.MVC.Entities.Message", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FromId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MessageContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ToId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FromId");
+
+                    b.HasIndex("ToId");
+
+                    b.ToTable("messages");
+                });
+
             modelBuilder.Entity("Artelio.MVC.Entities.Notification", b =>
                 {
                     b.Property<string>("Id")
@@ -270,6 +308,9 @@ namespace Artelio.MVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("To")
@@ -825,6 +866,25 @@ namespace Artelio.MVC.Migrations
                     b.Navigation("Following");
                 });
 
+            modelBuilder.Entity("Artelio.MVC.Entities.Message", b =>
+                {
+                    b.HasOne("Artelio.MVC.Entities.AppUser", "From")
+                        .WithMany("from")
+                        .HasForeignKey("FromId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Artelio.MVC.Entities.AppUser", "To")
+                        .WithMany("to")
+                        .HasForeignKey("ToId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("From");
+
+                    b.Navigation("To");
+                });
+
             modelBuilder.Entity("Artelio.MVC.Entities.Notification", b =>
                 {
                     b.HasOne("Artelio.MVC.Entities.AppUser", "User")
@@ -1040,7 +1100,11 @@ namespace Artelio.MVC.Migrations
 
                     b.Navigation("followings");
 
+                    b.Navigation("from");
+
                     b.Navigation("notifications");
+
+                    b.Navigation("to");
 
                     b.Navigation("userAbilities");
 

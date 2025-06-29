@@ -16,6 +16,8 @@ namespace Artelio.MVC.Entities
 
         public string ContentText { get; set; }
 
+        public DateTime Date { get; set; }
+
         public bool isActive { get; set; }
     }
 }

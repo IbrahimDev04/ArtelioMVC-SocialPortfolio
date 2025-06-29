@@ -1,5 +1,6 @@
 ﻿using Artelio.MVC.Contexts;
 using Artelio.MVC.DTOs.Friend;
+using Artelio.MVC.DTOs.Messenger;
 using Artelio.MVC.Entities;
 using Artelio.MVC.Objects;
 using Artelio.MVC.Services.Interfaces;
@@ -109,6 +110,48 @@ namespace Artelio.MVC.Services.Implements
         public async Task<int> GetAllFriendRequestCount(string userId)
         {
             return await _context.Follows.CountAsync(u => u.IsAccepted == false && u.FollowedId == userId);
+        }
+
+        public async Task<List<GetUserFriendsForMessengerDTO>> GetUserFriends(string UserId)
+        {
+            var friends = await _context.Follows
+                .Where(u => u.FollowingId == UserId && u.IsAccepted == true)
+                .Select(u => new
+                {
+                    u.FollowedId,
+                    u.Followed.UserName,
+                    u.Followed.ImageUrl
+                })
+                .ToListAsync();
+
+            var dtoList = new List<GetUserFriendsForMessengerDTO>();
+
+            foreach (var friend in friends)
+            {
+                var messages = await _context.messages
+                    .Where(m =>
+                        (m.FromId == UserId && m.ToId == friend.FollowedId) ||
+                        (m.FromId == friend.FollowedId && m.ToId == UserId))
+                    .OrderByDescending(m => m.Date)
+                    .Take(2)
+                    .Reverse()
+                    .ToListAsync();
+
+                string lastMessage = messages.Count > 1 ? messages[1].MessageContent :
+                                     messages.Count == 1 ? messages[0].MessageContent :
+                                     null;
+
+                dtoList.Add(new GetUserFriendsForMessengerDTO
+                {
+                    UserId = friend.FollowedId,
+                    UserName = friend.UserName,
+                    ImageUrl = friend.ImageUrl,
+                    LastMessageContent = lastMessage
+                });
+            }
+
+            return dtoList;
+
         }
     }
 }

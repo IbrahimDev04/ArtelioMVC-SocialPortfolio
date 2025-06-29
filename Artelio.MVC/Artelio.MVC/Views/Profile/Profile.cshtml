@@ -94,6 +94,8 @@
     <!-- Plugin css for this page -->
 
     <link rel="stylesheet" href="~/assets/main/css/plugins/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!-- End plugin css for this page -->
     <!-- inject:css -->
@@ -105,23 +107,38 @@
 <body>
 
 
-
     <nav class="navbar p-0 fixed-top d-flex flex-row" style="left:0;">
         <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/assets/profile//images/logo-mini.svg" alt="logo" /></a>
+            <a asp-action="index" asp-controller="home" class="navbar-brand brand-logo-mini"><img src="~/assets/logo/logo.png" alt="logo" /></a>
         </div>
-        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-
+        @if(User.Identity.IsAuthenticated)
+        {
+                    <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                                <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-lg-start" style="padding-top:10px; margin-left: 30px;">
+            <a asp-action="index" asp-controller="home" class="sidebar-brand brand-logo"><img style="width:50px; height:50px;" src="~/assets/logo/logo.png" alt="logo" /></a>
+        </div>
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item dropdown d-none d-lg-block">
                     <div style="display:flex;">
                         <div>
+                            @if (Model.GetNotReadMessageCount != 0)
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer; text-decoration: none; color: white;"><i class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px; right: 18px;"><p id="messageCounter" style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetNotReadMessageCount</p></i></a>
+
+                            }
+                            else
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer;  text-decoration: none; color: white;"><i id="messageCounterLoc" class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px; right: 18px;"><p id="messageCounter" style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
+                            }
+
+                        </div>
+                      <div>
                             @if (Model.GetFriendRequestCount != 0)
                             {
-                                <a style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetFriendRequestCount</p></i></a>
+                                <a asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer; color: white;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetFriendRequestCount</p></i></a>
 
                             }else{
-                            <a style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
+                            <a asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer;color: white;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
 
                             }
 
@@ -209,7 +226,11 @@
                 <span class="mdi mdi-format-line-spacing"></span>
             </button>
         </div>
+        }
+
     </nav>
+
+
 
   <!-- CHAT WIDGET -->
   <aside id="chat-widget-message" class="chat-widget chat-widget-overlay hidden sidebar right">
@@ -491,6 +512,8 @@
     <!-- /BAR ACTIONS -->
   </aside>
   <!-- /FLOATY BAR -->
+      <div id="toast" style="display:none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background-color: #333; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px; z-index: 9999; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
 
   <!-- CONTENT GRID -->
   <div class="content-grid" style="padding-left: 10px; padding-right:10px; padding-top: 100px">
@@ -693,8 +716,9 @@
   
         </div>
         
-       
-                @if (Model.GetUserInfoDTO.Id != Model.GetUserProfileDTO.Id)
+                @if (User.Identity.IsAuthenticated)
+                {
+                                    @if (Model.GetUserInfoDTO.Id != Model.GetUserProfileDTO.Id)
                 {
                     <div class="profile-header-info-actions">
 
@@ -719,10 +743,15 @@
                             <a style="text-decoration:none;" asp-action="AcceptFriendRequest" asp-controller="Friend" asp-route-following="@Model.GetUserInfoDTO.Id" asp-route-followed="@Model.GetUserProfileDTO.Id" class="profile-header-info-action button secondary">Accept +</a>
                             <a style="text-decoration:none;" asp-action="RejectFriendRequest" asp-controller="Friend" asp-route-followed="@Model.GetUserInfoDTO.Id" asp-route-following="@Model.GetUserProfileDTO.Id" class="profile-header-info-action button secondary">Reject -</a>
                         }
-
-                        <a class="profile-header-info-action button primary"><span class="hide-text-mobile">Send</span> Message</a>
+                            @if(Model.isFriendRequest == true && Model.isTakeFriendRequest != true)
+                            {
+                            <a class="profile-header-info-action button primary" asp-action="Index" asp-controller="messenger" asp-route-recieveUser="@Model.GetUserInfoDTO.Id"><span class="hide-text-mobile">Send</span> Message</a>
+                                
+                            }
 
                     </div>
+                }
+
                 }
 
       </div>
@@ -746,25 +775,6 @@
                         <use xlink:href="#svg-videos"></use>
                     </svg>
           <p class="section-menu-item-text">Project</p>
-        </a>
-        <a class="section-menu-item" href="~/assets/mainProfile/profile-groups.html">
-          <svg class="section-menu-item-icon icon-group">
-            <use xlink:href="#svg-group"></use>
-          </svg>
-          <p class="section-menu-item-text">Groups</p>
-        </a>
-        <a class="section-menu-item" href="~/assets/mainProfile/profile-photos.html">
-          <svg class="section-menu-item-icon icon-photos">
-            <use xlink:href="#svg-photos"></use>
-          </svg>
-          <p class="section-menu-item-text">Photos</p>
-        </a>
-        <a class="section-menu-item" href="~/assets/mainProfile/profile-videos.html">
-
-                    <svg class="section-menu-item-icon icon-friend">
-                        <use xlink:href="#svg-friend"></use>
-                    </svg>
-                    <p class="section-menu-item-text">Friends</p>
         </a>
   
       </div>
@@ -3070,6 +3080,57 @@
 
 
     <script src="~/assets/profile//vendors/js/vendor.bundle.base.js"></script>
+
+    
+    <script src="~/assets/SignalR/ChatHub.js"></script>
+    <script src="~/assets/SignalR/jquery.min.js"></script>
+    <script src="~/assets/SignalR/signalr.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("/chathub")
+                .withAutomaticReconnect()
+                .build();
+
+            connection.start().then(() => {
+                console.log("SignalR bağlantısı quruldu");
+                // Bildiriş icazəsini soruşuruq
+                if ("Notification" in window && Notification.permission !== "granted") {
+                    Notification.requestPermission();
+                }
+            }).catch(err => console.error(err));
+
+            function showToast(message) {
+                const toast = $("#toast");
+                toast.text(message).fadeIn(400);
+
+                setTimeout(() => {
+                    toast.fadeOut(400);
+                }, 5000); // 5 saniyə göstərilir
+            }
+
+            $(document).ready(() => {
+                const connection = new signalR.HubConnectionBuilder()
+                    .withUrl("/chathub")
+                    .withAutomaticReconnect()
+                    .build();
+
+                connection.start().then(() => {
+                    console.log("SignalR bağlantısı quruldu");
+                }).catch(err => console.error(err));
+
+                var count = @Html.Raw(Json.Serialize(Model.GetNotReadMessageCount));
+                connection.on("unreadMessageAlert", function(messageId, fromUserId) {
+                    showToast("Yeni mesajınız var!");
+                    count++;
+                    $("#messageCounter").text("")
+                    $("#messageCounter").append( `${count}`);
+                    $("#messageCounterLoc").css("top", "18px")
+                    });
+            });
+        })
+    </script>
 
 </body>
 </html>

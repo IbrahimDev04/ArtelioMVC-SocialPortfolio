@@ -17,10 +17,10 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Artelio.MVC.Controllers
 {
-    [Authorize]
-    public class ProfileController(IProfileSettingService _profileSettingService, IWebHostEnvironment _env, IAuthService _authService, IProfileService _profileService, IFriendService _friendService) : Controller
+
+    public class ProfileController(IProfileSettingService _profileSettingService, IWebHostEnvironment _env, IAuthService _authService, IProfileService _profileService, IFriendService _friendService, INotificationService _notificationService, IMessageService _messageService) : Controller
     {
-        //Base Information
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Index()
             {
@@ -28,15 +28,22 @@ namespace Artelio.MVC.Controllers
 
             UpdateBasicInfoDTO dto = await _profileSettingService.GetBasicInfo(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
+
             PageBasicInfoDTO baseDto = new PageBasicInfoDTO
             {
                 UpdateBasicInfoDTO = dto,
                 GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
             };
 
             return View(baseDto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Index(PageBasicInfoDTO baseDto)
         {
@@ -44,27 +51,35 @@ namespace Artelio.MVC.Controllers
 
             await _profileSettingService.UpdateBasicInfo(dto, User.FindFirst(ClaimTypes.NameIdentifier).Value, _env.WebRootPath);
 
-            return View();
+            return RedirectToAction("Profile", "Profile");
         }
 
 
         //Social Media
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> SocialMedia()
         {
 
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             UpdateSocialMediaInfoDTO socialDto = await _profileSettingService.GetSocialMediaInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageSocialMediaInfoDTO dto = new PageSocialMediaInfoDTO
             {
                 GetUserInfoDTO = userDto,
                 UpdateSocialMediaInfoDTO = socialDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> SocialMedia(PageSocialMediaInfoDTO baseDto)
         {
@@ -72,27 +87,35 @@ namespace Artelio.MVC.Controllers
 
             await _profileSettingService.UpdateSocialMediaInfo(dto, User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
-            return View();
+            return RedirectToAction("Profile", "Profile");
         }
 
 
         //Education
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Education()
         {
             List<GetEducationDTO> educationDTOs = await _profileSettingService.GetUserEducations(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageGetEducationDTO dto = new PageGetEducationDTO
             {
                 educationDTOs = educationDTOs,
-                GetUserInfoDTO = userDto
+                GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> CreateEducation()
         {
@@ -114,16 +137,23 @@ namespace Artelio.MVC.Controllers
                           Text = g.ToString()
                       })
             };
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageCreateEducationDTO dto = new PageCreateEducationDTO
             {
                 CreateEducationDTO = educationDTO,
-                GetUserInfoDTO = userDto
+                GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateEducation(PageCreateEducationDTO baseDto)
         {
@@ -134,21 +164,29 @@ namespace Artelio.MVC.Controllers
             return RedirectToAction("Education", "Profile");
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> UpdateEducation(string education)
         {
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             UpdateUserEducationDTO userEducationDto = await _profileSettingService.GetUserEducation(education);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageUpdateEducationDTO dto = new PageUpdateEducationDTO
             {
                 GetUserInfoDTO = userDto,
-                UpdateUserEducationDTO = userEducationDto
+                UpdateUserEducationDTO = userEducationDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UpdateEducation(string education, PageUpdateEducationDTO baseDto)
         {
@@ -156,9 +194,10 @@ namespace Artelio.MVC.Controllers
 
             await _profileSettingService.UpdateUserEducationAsync(dto, education);
 
-            return View();
+            return RedirectToAction("Education", "Profile");
         }
 
+        [Authorize]
         public async Task<IActionResult> DeleteEducation(string education)
         {
             await _profileSettingService.DeleteUserEducationAsync(education);
@@ -168,21 +207,29 @@ namespace Artelio.MVC.Controllers
 
 
         //Work Experience
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> WorkExperience()
         {
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             List<GetUserWorkExperienceDTO> experiences = await _profileSettingService.GetWorkExperiences(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageGetWorkExperienceDTO dto = new PageGetWorkExperienceDTO
             {
                 GetUserInfoDTO = userDto,
-                GetUserWorkExperienceDTOs = experiences
+                GetUserWorkExperienceDTOs = experiences,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);  
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> CreateExperience()
         {
@@ -197,16 +244,23 @@ namespace Artelio.MVC.Controllers
                           Text = g.ToString()
                       })
             };
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageCreateExperienceDTO dto = new PageCreateExperienceDTO
             {
                 GetUserInfoDTO = userDto,
-                CreateUserExperience = experienceDTO
+                CreateUserExperience = experienceDTO,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateExperience(PageCreateExperienceDTO baseDto)
         {
@@ -217,21 +271,29 @@ namespace Artelio.MVC.Controllers
             return RedirectToAction("WorkExperience", "Profile");
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> UpdateExperience(string work)
         {
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
             UpdateUserExperienceDTO experienceDto = await _profileSettingService.GetWorkExperience(work);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageUpdateExperienceDTO dto = new PageUpdateExperienceDTO
             {
                 GetUserInfoDTO = userDto,
-                UpdateUserExperienceDTO = experienceDto
+                UpdateUserExperienceDTO = experienceDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UpdateExperience(string work, PageUpdateExperienceDTO dto)
         {
@@ -242,6 +304,7 @@ namespace Artelio.MVC.Controllers
             return RedirectToAction("WorkExperience", "Profile");
         }
 
+        [Authorize]
         public async Task<IActionResult> DeleteExperience(string work)
         {
             await _profileSettingService.DeleteUserExperienceAsync(work);
@@ -251,33 +314,48 @@ namespace Artelio.MVC.Controllers
 
 
         //Award
+        [Authorize]
         public async Task<IActionResult> Award()
         {
             List<GetUserAwardDTO> awardDto = await _profileSettingService.GetUserAwards(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageGetAwardDTO dto = new PageGetAwardDTO
             {
                 GetUserInfoDTO = userDto,
-                GetUserAwardDTO = awardDto
+                GetUserAwardDTO = awardDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> CreateAward()
         {
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageCreateAwardDTO dto = new PageCreateAwardDTO
             {
-                GetUserInfoDTO = userDto
+                GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateAward(PageCreateAwardDTO baseDto)
         {
@@ -288,21 +366,29 @@ namespace Artelio.MVC.Controllers
             return RedirectToAction("Award", "Profile");
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> UpdateAward(string award)
         {
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             UpdateUserAwardDTO awardDto = await _profileSettingService.GetUserAward(award);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageUpdateAwardDTO dto = new PageUpdateAwardDTO
             {
                 UpdateUserAwardDTO = awardDto,
-                GetUserInfoDTO = userDto
+                GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UpdateAward(string award, PageUpdateAwardDTO dto)
         {
@@ -313,6 +399,7 @@ namespace Artelio.MVC.Controllers
             return RedirectToAction("Award", "Profile");
         }
 
+        [Authorize]
         public async Task<IActionResult> DeleteAward(string award)
         {
             await _profileSettingService.DeleteUserAwardAsync(award);
@@ -322,21 +409,29 @@ namespace Artelio.MVC.Controllers
 
 
         //Language
+        [Authorize]
         public async Task<IActionResult> Language()
         {
             List<GetLanguageDTO> languageDto = await _profileSettingService.GetAllLanguages(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageGetLanguageDTO dto = new PageGetLanguageDTO
             {
                 GetUserInfoDTO = userDto,
-                Languages = languageDto
+                Languages = languageDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
 
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> CreateLanguage()
         {
@@ -353,16 +448,23 @@ namespace Artelio.MVC.Controllers
             };
 
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageCreateLanguageDTO dto = new PageCreateLanguageDTO
             {
                 CreateLanguageDTO = languageDto,
-                GetUserInfoDTO = userDto
+                GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateLanguage(PageCreateLanguageDTO baseDto)
         {
@@ -379,6 +481,7 @@ namespace Artelio.MVC.Controllers
             return RedirectToAction("Language", "Profile");
         }
 
+        [Authorize]
         public async Task<IActionResult> DeleteLanguage(string language)
         {
             await _profileSettingService.DeleteUserLanguageAsync(language);
@@ -388,36 +491,52 @@ namespace Artelio.MVC.Controllers
 
 
         //Ability
+        [Authorize]
         public async Task<IActionResult> Skills()
         {
             List<GetAbilityDTO> list = await _profileSettingService.GetAllAbility(User.FindFirst(ClaimTypes.NameIdentifier).Value); ;
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageGetAbilityDTO dto = new PageGetAbilityDTO
             {
                 GetAbilityDTO = list,
-                GetUserInfoDTO = userDto
+                GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> CreateSkills()
         {
 
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
+
             CreateAbilityDTO abilityDto = new CreateAbilityDTO();
 
             PageCreateAbilityDTO dto = new PageCreateAbilityDTO
             {
                 GetUserInfoDTO = userDto,
-                CreateAbilityDTO = abilityDto
+                CreateAbilityDTO = abilityDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateSkills([FromBody] PageCreateAbilityDTO baseDto)
         {
@@ -425,9 +544,10 @@ namespace Artelio.MVC.Controllers
 
             await _profileSettingService.CreateAbiliy(dto, User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
-            return RedirectToAction("Skills", "Profile");
+            return RedirectToAction("profile", "profile");
         }
 
+        [Authorize]
         public async Task<IActionResult> DeleteSkills(string skill)
         {
             await _profileSettingService.DeleteUserAbilityAsync(skill);
@@ -437,18 +557,27 @@ namespace Artelio.MVC.Controllers
 
 
         //Project
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> CreateProject()
         {
             GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
+
             PageCreateProjectDTO dto = new PageCreateProjectDTO
             {
-                GetUserInfoDTO = userDto
+                GetUserInfoDTO = userDto,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateProject(PageCreateProjectDTO baseDto)
         {
@@ -456,7 +585,7 @@ namespace Artelio.MVC.Controllers
 
             await _profileService.CreateProject(dto, User.FindFirst(ClaimTypes.NameIdentifier).Value, _env.WebRootPath);    
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Project", "Profile");
         }
 
         //Profile
@@ -466,7 +595,7 @@ namespace Artelio.MVC.Controllers
 
             string UserId = userId == null ? User.FindFirst(ClaimTypes.NameIdentifier).Value : userId;
 
-            GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            GetUserInfoDTO userDto = User.Identity.IsAuthenticated ? await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value) : new GetUserInfoDTO();
             GetUserProfileDTO profileDto = await _authService.GetUserProfile(UserId);
             List<GetAbilityDTO> getAbilityDTOs = await _profileSettingService.GetAllAbility(UserId);
             List<GetLanguageDTO> getLanguageDTOs = await _profileSettingService.GetAllLanguages(UserId);
@@ -477,11 +606,14 @@ namespace Artelio.MVC.Controllers
             GetProfileUserAboutDTO getProfileUserAboutDTO = await _authService.GetProfileUserAbout(UserId);
             int getAllViewer = await _profileService.GetUserViewerCount(UserId);
             int getAllProject = await _profileService.GetUserPostCount(UserId);
-            bool? isTakeFriendRequest = userId != null ? await _friendService.IsTakeFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null;
-            bool? isSendFriendRequest = userId != null ? await _friendService.IsSendFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null;
-            bool? isFriendRequest = userId != null ? await _friendService.IsFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null;
+            bool? isTakeFriendRequest = User.Identity.IsAuthenticated ? userId != null ? await _friendService.IsTakeFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null : default;
+            bool? isSendFriendRequest = User.Identity.IsAuthenticated ? userId != null ? await _friendService.IsSendFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null : default;
+            bool? isFriendRequest = User.Identity.IsAuthenticated ? userId != null ? await _friendService.IsFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null : default;
             int friendCount = await _friendService.GetFriendCount(UserId);
-            int friendRequestCount = await _friendService.GetAllFriendRequestCount(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
+
             PageProfileDTO dto = new PageProfileDTO
             {
                 GetUserInfoDTO = userDto,
@@ -500,11 +632,13 @@ namespace Artelio.MVC.Controllers
                 isFriendRequest = isFriendRequest,
                 GetFriendCount = friendCount/2,
                 GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount
             };
 
             return View(dto);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Friends(string? userId)
         {
@@ -520,10 +654,18 @@ namespace Artelio.MVC.Controllers
 
 
             List<GetUserProjectsDTO> projectsDTOs = await _profileService.GetOnlyUserProjects(UserId);
-            GetUserInfoDTO userDto = await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            GetUserInfoDTO userDto = User.Identity.IsAuthenticated ? await _authService.GetUserInfo(User.FindFirst(ClaimTypes.NameIdentifier).Value) : new GetUserInfoDTO();
             GetUserProfileDTO profileDto = await _authService.GetUserProfile(UserId);
             int getAllViewer = await _profileService.GetUserViewerCount(UserId);
             int getAllProject = await _profileService.GetUserPostCount(UserId);
+
+            bool? isTakeFriendRequest = User.Identity.IsAuthenticated ? userId != null ? await _friendService.IsTakeFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null : default;
+            bool? isSendFriendRequest = User.Identity.IsAuthenticated ? userId != null ? await _friendService.IsSendFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null : default;
+            bool? isFriendRequest = User.Identity.IsAuthenticated ? userId != null ? await _friendService.IsFriendRequest(userId, User.FindFirst(ClaimTypes.NameIdentifier).Value) : null : default;
+            int friendCount = await _friendService.GetFriendCount(UserId);
+            int friendRequestCount = User.Identity.IsAuthenticated ? await _notificationService.GetActiveNotificationCount(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+            int messageCount = User.Identity.IsAuthenticated ? await _messageService.GetNotReadingMessage(User.FindFirst(ClaimTypes.NameIdentifier).Value) : default;
+
 
             PageProfileProjectDTO dto = new PageProfileProjectDTO
             {
@@ -532,6 +674,14 @@ namespace Artelio.MVC.Controllers
                 GetUserProfileDTO = profileDto,
                 GetAllViewer = getAllViewer,
                 GetPostCount = getAllProject,
+                isTakeFriendRequest = isTakeFriendRequest,
+                isSendFriendRequest = isSendFriendRequest,
+                isFriendRequest = isFriendRequest,
+                GetFriendCount = friendCount / 2,
+                GetFriendRequestCount = friendRequestCount,
+                GetNotReadMessageCount = messageCount,
+
+
             };
 
             return View(dto);  

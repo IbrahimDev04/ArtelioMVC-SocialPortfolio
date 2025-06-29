@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="~/assets/main/css/plugins/swiper.min.css">
     <!-- okai css -->
     <link rel="stylesheet" href="~/assets/main/css/style-stylish.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- page title -->
     <title>Artelio</title>
 
@@ -62,8 +64,8 @@
             <div class="mil-top-panel-2" style="background: linear-gradient(0deg, rgb(51 51 51) 0%, rgba(0, 0, 0, 0) 31%);">
                 <div class="container">
                     <div class="mil-left-side mil-tp-transition" id="swupTpLeft">
-                        <a href="~/assets/main/#top" class="mil-logo mil-scroll-to" data-no-swup>
-                            <i class="far fa-cube"></i>
+                        <a asp-action="Index" asp-controller="Home" class="mil-logo mil-scroll-to" data-no-swup>
+                            <img style="width:60px; height:60px;" src="~/assets/logo/logo.png" alt="Alternate Text" />
                             <span>Artelio</span>
                         </a>
                     </div>
@@ -71,19 +73,48 @@
                     <div class="mil-onepage-nav" id="swup-opm">
                     </div>
 
-                    <div class="mil-buttons-tp-frame mil-c-gone">
-                        <div class="mil-buttons">
-                            <a href="~/assets/main/contact-stl.html" class="mil-tp-btn"><i class="fal fa-envelope"></i></a>
-                            <a asp-action="Profile" asp-controller="Profile" class="mil-tp-btn">
-                                <div>
-                                    <img src="~/@Model.GetUserInfoDTO.ImageUrl" alt="Alternate Text" style="border-radius: 100%; width:40px; height: 40px;" />
+                        <div class="mil-buttons-tp-frame mil-c-gone">
+                            <div class="mil-buttons">
+                                                                    <div style="display:flex; margin-right:30px;">
+                                                                <div>
+                            @if (Model.GetNotReadMessageCount != 0)
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer; text-decoration: none; color: white;"><i class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px; right: 18px;"><p id="messageCounter" style="font-family: sans-serif;margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;">@Model.GetNotReadMessageCount</p></i></a>
+
+                            }
+                            else
+                            {
+                                <a asp-action="Index" asp-controller="Messenger" style="margin-top: 27px; cursor: pointer;  text-decoration: none; color: white;"><i id="messageCounterLoc" class="fa-brands fa-facebook-messenger" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px; right: 18px;"><p id="messageCounter" style="font-family: sans-serif;margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-size: 20px; font-weight: 900;"></p></i></a>
+                            }
+
+                        </div>
+                        <div>
+                            @if (Model.GetFriendRequestCount != 0)
+                            {
+                                <a  asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 17px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-family: sans-serif;font-size: 20px; font-weight: 900;">@Model.GetFriendRequestCount</p></i></a>
+
+                            }else{
+                            <a asp-action="Index" asp-controller="Notification" style="margin-top: 27px; cursor: pointer;"><i class="fa-solid fa-bell" style="margin-top: -13px; font-size: 20px; position: relative; top: 10px;"><p style="margin-bottom: 0px; position: relative; bottom: 13px;color: red; left: 13px;font-family: sans-serif;font-size: 20px; font-weight: 900;"></p></i></a>
+
+                            }
+
+                        </div>
+                        
+                    </div>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a asp-action="Profile" asp-controller="Profile" class="mil-tp-btn">
+                                    <div>
+                                        <img src="~/@Model.GetUserInfoDTO.ImageUrl" alt="Alternate Text" style="border-radius: 100%; width:40px; height: 40px;" />
+                                    </div>
+                                </a>}
+                                <div class="mil-tp-btn">
+                                    <div class="mil-menu-btn"><span></span></div>
                                 </div>
-                            </a>
-                            <div class="mil-tp-btn">
-                                <div class="mil-menu-btn"><span></span></div>
                             </div>
                         </div>
-                    </div>
+                    
+
                 </div>
             </div>
 
@@ -104,10 +135,14 @@
                                                 <a asp-action="Profile" asp-controller="Profile">Profile</a>
 
                                             </li>
-                                            <li>
-                                                <a asp-action="Index" asp-controller="Profile">Settings</a>
+                                            @if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li>
+                                                    <a asp-action="Index" asp-controller="Profile">Settings</a>
 
-                                            </li>
+                                                </li>
+                                            }
+
                                             
                                         </ul>
                                     </div>
@@ -119,18 +154,23 @@
                             <div class="col-lg-6">
                                 <div class="mil-right-side">
                                     <div class="mil-links-part">
-                                        <ul class="mil-links">
-                                            <li><a asp-controller="profile" asp-action="index">Basic Info</a></li>
-                                            <li><a asp-controller="profile" asp-action="socialmedia">Social Media</a></li>
-                                            <li><a asp-controller="profile" asp-action="workexperience">Work Experience</a></li>
-                                            <li><a asp-controller="profile" asp-action="award">Award</a></li>
-                                            <li><a asp-controller="profile" asp-action="language">Language</a></li>
-                                            <li><a asp-controller="profile" asp-action="skills">Skill</a></li>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <ul class="mil-links">
+                                                <li><a asp-controller="profile" asp-action="index">Basic Info</a></li>
+                                                <li><a asp-controller="profile" asp-action="socialmedia">Social Media</a></li>
+                                                <li><a asp-controller="profile" asp-action="workexperience">Work Experience</a></li>
+                                                <li><a asp-controller="profile" asp-action="award">Award</a></li>
+                                                <li><a asp-controller="profile" asp-action="language">Language</a></li>
+                                                <li><a asp-controller="profile" asp-action="skills">Skill</a></li>
 
 
 
-                                        </ul>
+                                            </ul>
+                                        }
+
                                     </div>
+                                    @if (User.Identity.IsAuthenticated){
                                     <div class="mil-blog-part">
                                         <div class="mil-blog-section">
                                             <div class="mil-jcb mil-aic">
@@ -142,26 +182,30 @@
                                             </div>
                                             <div class="swiper-container mil-blog-slider-sm">
                                                 <div class="swiper-wrapper">
-                                                    @foreach (var item in Model.getAllUserProjectDTOs)
-                                                    {
-                                                        <div class="swiper-slide">
-                                                            <a asp-action="Detail" asp-controller="Home" asp-route-project="@item.Id" class="mil-blog-card-sm mil-c-gone">
-                                                                <div class="mil-cover">
-                                                                    <div class="mil-hover-frame">
-                                                                        <img src="~/@item.ImageUrl" alt="cover">
+
+                                                    
+                                                        @foreach (var item in Model.getAllUserProjectDTOs)
+                                                        {
+                                                            <div class="swiper-slide">
+                                                                <a asp-action="Detail" asp-controller="Home" asp-route-project="@item.Id" class="mil-blog-card-sm mil-c-gone">
+                                                                    <div class="mil-cover">
+                                                                        <div class="mil-hover-frame">
+                                                                            <img src="~/@item.ImageUrl" alt="cover">
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="mil-text-frame">
-                                                                    <h4 class="mil-head6 mil-max-1row-text">@item.ProjectName</h4>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    }
+                                                                    <div class="mil-text-frame">
+                                                                        <h4 class="mil-head6 mil-max-1row-text">@item.ProjectName</h4>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        }
+
+                                                    
 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>}
                                 </div>
                             </div>
                         </div>
@@ -171,6 +215,9 @@
         </div>
         <!-- fixed elements end -->
         <!-- page transition -->
+
+        <div id="toast" style="display:none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background-color: #333; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px; z-index: 9999; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
         <div class="mil-transition-fade" id="swup">
             <div class="mil-transition-frame">
 
@@ -260,6 +307,57 @@
 
     <!-- pixy js -->
     <script src="~/assets/main/js/main.js"></script>
+
+
+    <script src="~/assets/SignalR/ChatHub.js"></script>
+    <script src="~/assets/SignalR/jquery.min.js"></script>
+    <script src="~/assets/SignalR/signalr.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("/chathub")
+                .withAutomaticReconnect()
+                .build();
+
+            connection.start().then(() => {
+                console.log("SignalR bağlantısı quruldu");
+                // Bildiriş icazəsini soruşuruq
+                if ("Notification" in window && Notification.permission !== "granted") {
+                    Notification.requestPermission();
+                }
+            }).catch(err => console.error(err));
+
+            function showToast(message) {
+                const toast = $("#toast");
+                toast.text(message).fadeIn(400);
+
+                setTimeout(() => {
+                    toast.fadeOut(400);
+                }, 5000); // 5 saniyə göstərilir
+            }
+
+            $(document).ready(() => {
+                const connection = new signalR.HubConnectionBuilder()
+                    .withUrl("/chathub")
+                    .withAutomaticReconnect()
+                    .build();
+
+                connection.start().then(() => {
+                    console.log("SignalR bağlantısı quruldu");
+                }).catch(err => console.error(err));
+
+                var count = @Html.Raw(Json.Serialize(Model.GetNotReadMessageCount));
+                connection.on("unreadMessageAlert", function(messageId, fromUserId) {
+                    showToast("Yeni mesajınız var!");
+                    count++;
+                    $("#messageCounter").text("")
+                    $("#messageCounter").append( `${count}`);
+                    $("#messageCounterLoc").css("top", "18px")
+                    });
+            });
+        })
+    </script>
 
 </body>
 

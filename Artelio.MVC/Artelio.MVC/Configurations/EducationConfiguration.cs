@@ -32,7 +32,7 @@ namespace Artelio.MVC.Configurations
             builder.Property(e => e.EndDate);
 
             builder.Property(e => e.About)
-                .HasMaxLength(1000);
+                .HasMaxLength(5000);
 
             builder.HasMany(e => e.userEducations)
                 .WithOne(ue => ue.Education)

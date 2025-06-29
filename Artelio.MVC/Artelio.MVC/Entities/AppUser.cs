@@ -26,6 +26,8 @@ namespace Artelio.MVC.Entities
         public ICollection<Follow> followeds { get; set; }
         public ICollection<ViewerProject> viewerProjects { get; set; }
         public ICollection<Notification> notifications { get; set; }
+        public ICollection<Message> from { get; set; }
+        public ICollection<Message> to { get; set; }
 
 
 

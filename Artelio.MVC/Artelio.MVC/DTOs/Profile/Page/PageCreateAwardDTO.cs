@@ -6,5 +6,8 @@ namespace Artelio.MVC.DTOs.Profile.Page
     {
         public CreateAwardDTO? CreateAwardDTO { get; set; }
         public GetUserInfoDTO GetUserInfoDTO { get; set; }
+        public int GetFriendRequestCount { get; set; }
+        public int GetNotReadMessageCount { get; set; }
+
     }
 }
