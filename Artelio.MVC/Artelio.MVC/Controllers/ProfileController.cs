@@ -585,7 +585,7 @@ namespace Artelio.MVC.Controllers
 
             await _profileService.CreateProject(dto, User.FindFirst(ClaimTypes.NameIdentifier).Value, _env.WebRootPath);    
 
-            return RedirectToAction("Project", "Profile");
+            return RedirectToAction("Projects", "Profile");
         }
 
         //Profile
@@ -685,6 +685,13 @@ namespace Artelio.MVC.Controllers
             };
 
             return View(dto);  
+        }
+
+        public async Task<IActionResult> DeleteProject(string project)
+        {
+            await _profileService.DeleteProject(project);
+            return RedirectToAction("Projects", "Profile");
+
         }
 
     }

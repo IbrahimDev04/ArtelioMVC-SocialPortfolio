@@ -19,5 +19,8 @@ namespace Artelio.MVC.Services.Interfaces
         //Create
         Task CreateProject(CreateProjectDTO data, string UserId, string environment);
         Task ViewProject(string projectId, string userId);
+
+        //Delete
+        Task DeleteProject(string projectId);
     }
 }

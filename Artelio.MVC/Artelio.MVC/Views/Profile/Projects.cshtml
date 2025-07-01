@@ -753,12 +753,18 @@
                         @foreach (var item in Model.projectsDTOs)
                         {
                             <div style="background-color: rgba(128,128,128,0.6); border-radius:20px; padding-top:10px; padding-bottom:10px;padding: 10px; margin: 40px;">
-                        <a style="text-decoration: none; font-weight: 900;" asp-action="Profile" asp-controller="Profile" asp-route-userId="@item.UserId">
+                        <div style="display:flex; justify-content:space-between;">
+                                                            <a style="text-decoration: none; font-weight: 900;" asp-action="Profile" asp-controller="Profile" asp-route-userId="@item.UserId">
                             <div style="display: flex; margin-bottom:10px;">
                                 <img class="img-xs rounded-circle" src="~/@item.UserImageUrl" alt="">
                                 <p style="padding-top: 10px; padding-left: 10px;" class="mb-0 d-none d-sm-block navbar-profile-name">@item.UserName</p>
                             </div>
                         </a>
+                        <a asp-action="DeleteProject" asp-controller="Profile" asp-route-project="@item.Id" style="color:white;text-align:center; padding:15px; padding-top:10px;">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                        </div>
+
                         <a asp-action="Detail" asp-controller="Home" asp-route-project="@item.Id">
                                                         <!-- PHOTO PREVIEW -->
                             <div class="photo-preview popup-picture-trigger" style="height: 600px; width: 100%;">

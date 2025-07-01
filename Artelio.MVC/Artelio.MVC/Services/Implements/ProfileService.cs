@@ -230,5 +230,12 @@ namespace Artelio.MVC.Services.Implements
         }
 
 
+        //Delete
+        public async Task DeleteProject(string projectId)
+        {
+            var project = await _context.Projects.FirstOrDefaultAsync(u => u.Id == projectId);
+            _context.Projects.Remove(project);
+            await _context.SaveChangesAsync();
+        }
     }
 }

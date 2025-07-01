@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artelio.MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+724f7d226796cc14497b3864874385c959cd626a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b75ef6a74cfa0f2b36ae31b8d2cd2df3e20e61ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artelio.MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artelio.MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
